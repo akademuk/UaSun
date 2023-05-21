@@ -481,6 +481,25 @@ header ul li:nth-of-type(1) {
         left: auto;
         right: 235px;
     }
+    @keyframes sunOpen {
+        0% {
+            transform: translate(100%, 100%);
+        }
+    
+        100% {
+            transform: translate(0%, 0%);
+        }
+    }
+    
+    @keyframes sunClose {
+        0% {
+            transform: translate(0%, 0%);
+        }
+    
+        100% {
+            transform: translate(100%, 100%);
+        }
+    }
 }
 
 
