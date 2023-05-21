@@ -141,6 +141,7 @@ header {
     padding: 0 190px;
     box-sizing: border-box;
 }
+
 header ul {
     display: flex;
     align-items: center;
@@ -148,7 +149,8 @@ header ul {
     padding: 21px 0;
     margin-right: 32px;
 }
-header ul li{
+
+header ul li {
     padding: 4px 17px;
     display: flex;
     align-items: center;
@@ -156,6 +158,7 @@ header ul li{
     margin-right: 8px;
     white-space: nowrap;
 }
+
 header ul li a {
     font-weight: 400;
     font-size: 16px;
@@ -166,9 +169,11 @@ header ul li a {
     text-decoration: none;
     transition: all 0.3s;
 }
+
 header ul li:nth-last-of-type(1) {
     margin-right: 0;
 }
+
 header button {
     display: flex;
     justify-content: center;
@@ -180,6 +185,7 @@ header button {
     border: none;
     transition: all 0.3s;
 }
+
 .banner {
     background: url(../img/whiteTexture.png), #2A2F35;
     background-repeat: repeat;
@@ -427,13 +433,14 @@ header button {
     text-align: center;
     text-transform: uppercase;
     color: #2A2F35;
-    padding:27.5px 24px;
+    padding: 27.5px 24px;
     white-space: nowrap;
 }
 
 .bannerContentTittle .buttonlinkTransition img {
     margin-left: 8px;
 }
+
 .bannerBottomContent {
     display: flex;
     align-items: center;
@@ -443,6 +450,7 @@ header button {
     bottom: 64px;
     z-index: 3;
 }
+
 .bannerBottomContent p {
     margin-left: 16px;
     font-weight: 300;
@@ -457,6 +465,7 @@ header button {
 .burger {
     display: none;
 }
+
 header ul li:nth-of-type(1) {
     width: 50px;
     height: 26px;
@@ -481,21 +490,22 @@ header ul li:nth-of-type(1) {
         left: auto;
         right: 235px;
     }
+
     @keyframes sunOpen {
         0% {
             transform: translate(100%, 100%);
         }
-    
+
         100% {
             transform: translate(0%, 0%);
         }
     }
-    
+
     @keyframes sunClose {
         0% {
             transform: translate(0%, 0%);
         }
-    
+
         100% {
             transform: translate(100%, 100%);
         }
@@ -531,33 +541,38 @@ header ul li:nth-of-type(1) {
     .sun {
         left: calc(800px - 2vw);
     }
+
     header {
         padding: 0 162px;
     }
+
     .bannerBottomContent {
         left: 190px;
     }
+
     header ul {
         margin-left: 397px;
     }
+
     .sunBtnToggle {
         margin-right: 93px;
     }
+
     @keyframes sunOpen {
         0% {
             transform: translate(100%, 100%);
         }
-    
+
         100% {
             transform: translate(5%, 8%);
         }
     }
-    
+
     @keyframes sunClose {
         0% {
             transform: translate(5%, 8%);
         }
-    
+
         100% {
             transform: translate(100%, 100%);
         }
@@ -597,33 +612,38 @@ header ul li:nth-of-type(1) {
     .sun {
         left: 558px;
     }
+
     header {
         padding: 0 162px;
     }
+
     .bannerBottomContent {
         left: 162px;
-    } 
+    }
+
     header {
         padding: 0 42px;
     }
+
     .bannerBottomContent {
         left: 42px;
     }
+
     @keyframes sunOpen {
         0% {
             transform: translate(100%, 100%);
         }
-    
+
         100% {
             transform: translate(1%, 7%);
         }
     }
-    
+
     @keyframes sunClose {
         0% {
             transform: translate(1%, 7%);
         }
-    
+
         100% {
             transform: translate(100%, 100%);
         }
@@ -746,6 +766,7 @@ header ul li:nth-of-type(1) {
             transform: translate(100%, 100%);
         }
     }
+
     .burger {
         display: flex;
         flex-direction: row;
@@ -756,54 +777,68 @@ header ul li:nth-of-type(1) {
         background: #F79C14;
         border-radius: 100px;
     }
+
     .bannerBottomContent {
         flex-direction: column;
         align-items: flex-start;
         bottom: 16px;
     }
+
     .bannerBottomContent p {
         font-size: 14px;
         line-height: 130%;
         margin-left: 0;
     }
-    .bannerBottomContent p br{
+
+    .bannerBottomContent p br {
         display: none;
     }
+
     .bannerBottomContent img {
         width: 45.38px;
         height: 20px;
         margin-bottom: 16.5px;
     }
+
     header ul {
         display: none;
     }
+
     header button {
         display: none;
     }
+
     .logo a img {
         width: 80px;
         height: 25px;
     }
+
     header {
-        padding: 0 64px;    
+        padding: 0 64px;
     }
+
     .bannerContentTittle h1 {
         margin-top: -1px;
         margin-bottom: 19px;
     }
+
     .bannerContentTittle button {
         padding: 16.5px 42px 16.5px 16px;
     }
+
     .sunBtnToggleClass p:nth-of-type(2) {
         font-weight: 200;
     }
+
     .sunBtnToggleClass.active p:nth-of-type(2) {
         font-weight: 200;
     }
-    .bannerImg{
+
+    .bannerImg {
         left: -34px;
     }
-    .sunBtnToggle3  p:nth-of-type(2) {
+
+    .sunBtnToggle3 p:nth-of-type(2) {
         width: 50%;
     }
 }
@@ -812,15 +847,19 @@ header ul li:nth-of-type(1) {
     .bannerContent {
         padding-left: 32px;
     }
+
     .bannerContentTittle h1 br {
         display: block;
     }
+
     .bannerContentTittle {
         margin-bottom: 84px;
     }
+
     .bannerImg {
         left: -45px;
     }
+
     @keyframes sunOpen {
         0% {
             transform: translate(100%, 100%);
@@ -840,9 +879,11 @@ header ul li:nth-of-type(1) {
             transform: translate(100%, 100%);
         }
     }
+
     header {
         padding: 0 32px;
     }
+
     .bannerBottomContent {
         left: 32px;
         max-width: 448px;
@@ -854,36 +895,44 @@ header ul li:nth-of-type(1) {
     .banner {
         height: 1082px;
     }
+
     .bannerContent {
         padding: 64px 16px 0 16px;
     }
+
     .bannerContentTittle h1 {
         font-size: 45px;
     }
+
     .bannerContentTittle {
         margin-bottom: 64px;
     }
-    .bannerImg  {
+
+    .bannerImg {
         width: 968.54px;
         height: 466.13px;
         bottom: 24px;
         left: 50%;
         transform: translateX(-50%);
     }
+
     .bannerImg img {
         width: 968.54px;
         height: 466.13px;
         object-fit: contain;
     }
+
     .sun {
         width: 395.38px;
         height: 395.38px;
         top: 580px;
         left: 0;
     }
+
     header {
         padding: 0 16px;
     }
+
     .bannerBottomContent {
         max-width: 288px;
         left: 16px;
