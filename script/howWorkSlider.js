@@ -1,28 +1,36 @@
 $(document).ready(function () {
-    var slider = $('.workSlider');
-    var counter = $('.sliderCounter');
+    var slider = $('.howWorkSlider');
+    var counter = $('.howWorksliderCounter');
 
     slider.slick({
-        vertical: true,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         arrows: true,
-        // infinite: false,
+        infinite: true,
         centerMode: true,
-        centerPadding: '0px',
-        prevArrow: '.workSliderPrev',
-        nextArrow: '.workSliderNext',
+        prevArrow: '.howWorkSliderPrev',
+        nextArrow: '.howWorkSliderNext',
+        variableWidth: true,
         responsive: [
             {
                 breakpoint: 1200,
                 settings: {
-                    vertical: false,
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     centerMode: false,
-                    dots: true,
+                    infinite: true,
                     variableWidth: true,
-                    appendDots: $('.workSliderdots'),
+                    dots: true,
+                    appendDots: $('.howWorkSliderdots')
+                },
+                breakpoint: 767,
+                settings: {
+                    vertical: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                    dots: true,
+                    appendDots: $('.howWorkSliderdots')
                 },
                 breakpoint: 576,
                 settings: {
@@ -31,8 +39,7 @@ $(document).ready(function () {
                     slidesToScroll: 1,
                     centerMode: false,
                     dots: true,
-                    variableWidth: true,
-                    appendDots: $('.workSliderdots'),
+                    appendDots: $('.howWorkSliderdots')
                 },
             }
         ]
