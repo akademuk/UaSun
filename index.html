@@ -12,7 +12,111 @@
     <title>UASUN</title>
 </head>
 
-<body>
+<body class="body">
+    <div class="menu">
+        <div class="menuContent">
+            <div class="close">
+                <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+                        fill="#000000" />
+                </svg>
+            </div>
+            <div class="menuContentNav">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img width="18" height="18" src="img/home.svg" alt="home">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="linkTransition">
+                            ПРО НАС
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="linkTransition">
+                            ПРИДБАТИ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="linkTransition">
+                            КОНТАКТИ
+                        </a>
+                    </li>
+                </ul>
+                <button class="buttonlinkTransition">
+                    РОЗРАХУВАТИ ВАРТІСТЬ
+                    <img src="img/message.svg" alt="message">
+                </button>
+            </div>
+            <div class="menuContentContact">
+                <a href="tel:80986313558">+380 (98) 631-35-58</a>
+                <a href="mailto:uasuntrade@gmail.com">uasuntrade@gmail.com</a>
+                <div class="menuContentContactSocial">
+                    <a href="#">
+                        <img width="32" height="32" src="img/teelegram.svg" alt="telegram">
+                    </a>
+                    <a href="#">
+                        <img width="32" height="32" src="img/Viber.svg" alt="Viber">
+                    </a>
+                    <a href="#">
+                        <img width="32" height="32" src="img/instagramm.svg" alt="instagram">
+                    </a>
+                </div>
+            </div>
+            <div class="menuContentLogo">
+                <img width="64" height="20" src="img/logo.svg" alt="">
+                <p>Ваш провідник на шляху до енергетичної автономії</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modalHeader">
+                <button class="close-btn">
+                    <svg width="16" height="16" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+                            fill="#000000" />
+                    </svg>
+                </button>
+                <div class="modalHeaderContent">
+                    <h2>Замовлення консультації</h2>
+                    <img width="128" height="40" src="img/logo.svg" alt="">
+                </div>
+            </div>
+            <div class="modalMain">
+                <div class="modalMainLeft">
+                    <h3>Замовте консультацію нашого експерта зараз!</h3>
+                    <div class="modalMainText">
+                        Під час консультації ви дізнаєтеся про <b>переваги використання сонячних панелей</b> для вашого
+                        будинку чи бізнесу, про різні <b>варіанти встановлення</b> та про те, <b>яка система найбільше
+                            підходить</b> для ваших потреб.
+                        <br> <br> Менеджер докладно розповість про технічні характеристики наших сонячних панелей та про
+                        процес встановлення чи підключення.
+                    </div>
+                </div>
+                <div class="modalMainRight">
+                    <div class="modalMainRightTop">
+                        <p>Замовте консультацію, та отримайте знижку на вартість обладнаяння!</p>
+                        <div class="modalMainRightTopPrecent">
+                            5%
+                        </div>
+                    </div>
+                    <form id="ajax-contact-form" action="" data-form-validate="true">
+                        <input type="text" name="name" value="" placeholder="Ваше ім'я" required />
+                        <input type="text" name="phone" value="" placeholder="Контактний Телефон " required />
+                        <input type="text" name="phone" value="" placeholder="Введіть місто/регіон " required />
+                        <!-- <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response"> -->
+                        <input class="btn submit" type="submit" name="submit" value="Надіслати" />
+                        <!-- <div class="text-danger" id="recaptchaError"></div> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="banner">
         <header>
@@ -21,33 +125,36 @@
                     <img width="160" height="50" src="img/logo.svg" alt="UASUN">
                 </a>
             </div>
-            <ul>
-                <li>
-                    <a href="#">
-                        <img width="18" height="18" src="img/home.svg" alt="home">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="linkTransition">
-                        ПРО НАС
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="linkTransition">
-                        ПРИДБАТИ
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="linkTransition">
-                        КОНТАКТИ
-                    </a>
-                </li>
-            </ul>
-            <button class="buttonlinkTransition">
-                <img width="24" height="24" src="img/message.svg" alt="message">
-            </button>
-            <div class="burger">
-
+            <div class="divFlex">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img width="18" height="18" src="img/home.svg" alt="home">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="linkTransition">
+                            ПРО НАС
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="linkTransition">
+                            ПРИДБАТИ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="linkTransition">
+                            КОНТАКТИ
+                        </a>
+                    </li>
+                </ul>
+                <button class="buttonlinkTransition modal-trigger">
+                    <img width="24" height="24" src="img/message.svg" alt="message">
+                </button>
+                <div class="burger container">
+                    <div class="bar1"></div>
+                    <div class="bar3"></div>
+                </div>
             </div>
         </header>
         <div class="bannerImg">
@@ -72,7 +179,7 @@
             <div class="bannerContentTittle">
                 <h1>Сонячні <br> станції</h1>
                 <p>під ключ</p>
-                <button class="buttonlinkTransition">Розрахувати вартість
+                <button class="buttonlinkTransition modal-trigger">Розрахувати вартість
                     <img width="24" height="24" src="img/btnArrow.svg" alt="Arrow">
                 </button>
             </div>
@@ -86,7 +193,179 @@
 
     </div>
 
+    <section class="needed">
+        <div class="wrapper">
+            <h2>Ми корисні, <br> коли потрібно</h2>
+            <div class="neededContainer">
+                <div class="neededContainerLeft">
+                    <div class="neededContainerLeftContainer">
+                        <div class="neededContainerIcon">
+                            <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M26.5781 15.7851C26.715 15.3196 27.1422 15 27.6274 15H36.3774C36.729 15 37.0591 15.169 37.2647 15.4542C37.4703 15.7394 37.5262 16.1061 37.415 16.4396L33.5199 28.125H41.8462C42.2639 28.125 42.6452 28.3629 42.8287 28.7382C43.0122 29.1134 42.966 29.5605 42.7095 29.8902L27.397 49.5777C27.0729 49.9945 26.4972 50.1202 26.0288 49.8764C25.5604 49.6327 25.333 49.0892 25.4883 48.5845L29.4278 35.7812H22.1587C21.814 35.7812 21.4895 35.6187 21.283 35.3427C21.0765 35.0667 21.0121 34.7095 21.1094 34.3788L26.5781 15.7851Z" fill="white"/>
+                                <rect x="1.00244" y="1.5" width="62" height="62" rx="31" stroke="white" stroke-width="2"/>
+                            </svg>  
+                        </div>
+                        <h3>отримати <b>енергетичну
+                            автономію</b> та <b>Заощаджувати гроші</b></h3>
+                        <p>Забезпечте ваш бізнес енергією в будь-який момент, незалежно від наявності мережі електропостачання. Тим самим ви зменшуєте енергоспоживання з мережі та економите кошти на розрахунках.</p>
+                    </div>
+                    <div class="neededContainerLeftContainer">
+                        <div class="neededContainerIcon">
+                            <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M46.3554 25.8995C46.7256 26.1855 46.7939 26.7174 46.5079 27.0876L40.4006 34.9935L40.3994 34.995C39.9508 35.5732 39.3758 36.041 38.7186 36.3629C38.0614 36.6848 37.3393 36.8521 36.6074 36.8521C35.8756 36.8521 35.1535 36.6848 34.4963 36.3629C33.8391 36.041 33.2641 35.5732 32.8154 34.995L32.8069 34.984L29.8467 31.0369C29.557 30.6652 29.1864 30.3643 28.7631 30.157C28.3379 29.9487 27.8706 29.8404 27.3971 29.8404C26.9236 29.8404 26.4563 29.9487 26.031 30.157C25.6061 30.3651 25.2343 30.6676 24.944 31.0413C24.9438 31.0416 24.9442 31.0411 24.944 31.0413L18.8373 38.9465C18.5513 39.3167 18.0194 39.385 17.6491 39.099C17.2789 38.813 17.2106 38.281 17.4966 37.9108L23.6039 30.0049L23.6051 30.0034C24.0538 29.4253 24.6287 28.9574 25.2859 28.6355C25.9432 28.3137 26.6653 28.1463 27.3971 28.1463C28.1289 28.1463 28.851 28.3137 29.5083 28.6355C30.1655 28.9574 30.7404 29.4253 31.1891 30.0034L31.1977 30.0144L34.1578 33.9616C34.4476 34.3332 34.8181 34.6342 35.2414 34.8415C35.6667 35.0497 36.1339 35.158 36.6074 35.158C37.081 35.158 37.5482 35.0497 37.9735 34.8415C38.3984 34.6334 38.7701 34.331 39.0603 33.9573C39.0606 33.957 39.0608 33.9567 39.0611 33.9563L45.1672 26.052C45.4532 25.6817 45.9852 25.6135 46.3554 25.8995Z" fill="white"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M44.3758 25.4406C44.9995 24.6334 46.1595 24.4845 46.9667 25.1081C47.774 25.7317 47.9229 26.8917 47.2993 27.699L41.192 35.6049L41.1896 35.6079C40.6475 36.3065 39.9526 36.8721 39.1584 37.261C38.3643 37.6499 37.4917 37.8521 36.6074 37.8521C35.7232 37.8521 34.8506 37.6499 34.0565 37.261C33.2623 36.8721 32.5676 36.3067 32.0254 35.6081L32.0169 35.5971C32.0104 35.5888 32.0041 35.5804 31.9979 35.5718L29.0528 31.645C28.8571 31.3961 28.6078 31.1944 28.3233 31.0551C28.035 30.9139 27.7182 30.8404 27.3971 30.8404C27.076 30.8404 26.7592 30.9139 26.4709 31.0551C26.1828 31.1961 25.9308 31.4011 25.734 31.6544L19.6287 39.5578C19.0051 40.3651 17.8451 40.514 17.0378 39.8903C16.2305 39.2667 16.0816 38.1067 16.7053 37.2995L22.8151 29.3903C23.3572 28.6917 24.0519 28.1264 24.8461 27.7374C25.6403 27.3485 26.5128 27.1463 27.3971 27.1463C28.2814 27.1463 29.1539 27.3485 29.9481 27.7374C30.7422 28.1264 31.4369 28.6917 31.9791 29.3903L31.9876 29.4013C31.9941 29.4097 32.0005 29.4181 32.0067 29.4266L34.9517 33.3534C35.1474 33.6024 35.3967 33.804 35.6812 33.9434L34.9361 35.4648M18.0459 38.3351C18.0459 38.3352 18.046 38.3351 18.0459 38.3351V38.3351ZM44.3758 25.4406L38.2715 33.3427L44.3758 25.4406ZM38.2715 33.3427L38.2706 33.3439L38.2715 33.3427ZM38.2706 33.3439C38.2705 33.344 38.2699 33.3448 38.2698 33.3449L38.2706 33.3439Z" fill="white"/>
+                                <rect x="1.00244" y="1.5" width="62" height="62" rx="31" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3>Необхідно <b>підвищити якість напруги</b></h3>
+                        <p>Нестабільна напруга та наявність шумів може призвести до пошкоджень обладнання – сонячні станції дають можливість стабільної роботи техніки.</p>
+                    </div>
+                </div>
+                <div class="neededContainerRight">
+                    <div class="neededContainerLeftContainer">
+                        <div class="neededContainerIcon">
+                            <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M34.1116 18.1061L32.9977 18.8267L31.8837 18.1061C32.1282 17.7282 32.5476 17.5 32.9977 17.5C33.4478 17.5 33.8672 17.7282 34.1116 18.1061ZM32.9977 21.3228C32.9177 21.4528 32.8343 21.5887 32.7479 21.7302C31.9256 23.0763 30.831 24.9181 29.7381 26.9061C28.6428 28.8983 27.5613 31.0157 26.7572 32.9174C25.9283 34.8776 25.48 36.4167 25.48 37.329C25.48 39.3228 26.272 41.235 27.6819 42.6448C29.0917 44.0547 31.0039 44.8467 32.9977 44.8467C34.9915 44.8467 36.9037 44.0547 38.3135 42.6448C39.7233 41.235 40.5154 39.3228 40.5154 37.329C40.5154 36.4167 40.067 34.8776 39.2382 32.9174C38.4341 31.0157 37.3525 28.8983 36.2573 26.9061C35.1644 24.9181 34.0698 23.0763 33.2475 21.7302C33.1611 21.5887 33.0777 21.4528 32.9977 21.3228ZM32.9977 18.8267C31.8837 18.1061 31.8839 18.1059 31.8837 18.1061L31.8764 18.1175L31.8565 18.1484L31.7806 18.2668C31.7145 18.3702 31.618 18.5217 31.4956 18.7157C31.2508 19.1037 30.9019 19.6622 30.4836 20.347C29.6476 21.7155 28.5311 23.5939 27.4129 25.6278C26.2971 27.6576 25.1675 29.8639 24.3133 31.8841C23.4838 33.8458 22.8267 35.8268 22.8267 37.329C22.8267 40.0265 23.8982 42.6136 25.8057 44.521C27.7131 46.4284 30.3002 47.5 32.9977 47.5C35.6952 47.5 38.2822 46.4284 40.1897 44.521C42.0971 42.6136 43.1687 40.0265 43.1687 37.329C43.1687 35.8268 42.5115 33.8458 41.682 31.8841C40.8278 29.8639 39.6983 27.6576 38.5824 25.6278C37.4642 23.5939 36.3477 21.7155 35.5117 20.347C35.0934 19.6622 34.7445 19.1037 34.4997 18.7157C34.3773 18.5217 34.2809 18.3702 34.2148 18.2668L34.1388 18.1484L34.1189 18.1175L34.1122 18.1071C34.1121 18.1069 34.1116 18.1061 32.9977 18.8267Z" fill="white"/>
+                                <rect x="1.99756" y="1.5" width="62" height="62" rx="31" stroke="white" stroke-width="2"/>
+                            </svg> 
+                        </div>
+                        <h3>Прагнете долучити свій бізнес до <b>екологічного виробництва</b></h3>
+                        <p>Сонячні електростанції є екологічно чистим джерелом енергії. Впроваджуючи такі системи у роботу свого бізнесу, ви дбаєте про екологію, а також підвищуєте свою репутацію серед конкурентів.</p>
+                    </div>
+                    <div class="neededContainerLeftContainer">
+                        <div class="neededContainerIcon">
+                            <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.8671 23.9134C22.0662 23.9134 20.6063 25.3733 20.6063 27.1743V37.8264C20.6063 39.6274 22.0662 41.0873 23.8671 41.0873H42.128C43.9289 41.0873 45.3889 39.6274 45.3889 37.8264V37.2286H40.9867C39.7327 37.2286 38.53 36.7305 37.6433 35.8437C36.7566 34.957 36.2584 33.7544 36.2584 32.5004C36.2584 31.2463 36.7566 30.0437 37.6433 29.157C38.53 28.2702 39.7327 27.7721 40.9867 27.7721H45.3889V27.1743C45.3889 25.3733 43.9289 23.9134 42.128 23.9134H23.8671ZM47.9976 27.1743C47.9976 23.9326 45.3697 21.3047 42.128 21.3047H23.8671C20.6255 21.3047 17.9976 23.9326 17.9976 27.1743V37.8264C17.9976 41.0681 20.6255 43.696 23.8671 43.696H42.128C45.3697 43.696 47.9976 41.0681 47.9976 37.8264V27.1743ZM45.3889 30.3808H40.9867C40.4245 30.3808 39.8854 30.6041 39.4879 31.0016C39.0904 31.3991 38.8671 31.9382 38.8671 32.5004C38.8671 33.0625 39.0904 33.6016 39.4879 33.9991C39.8854 34.3966 40.4245 34.6199 40.9867 34.6199H45.3889V30.3808ZM24.0845 27.9351C24.0845 27.2148 24.6685 26.6308 25.3889 26.6308H29.9541C30.6745 26.6308 31.2584 27.2148 31.2584 27.9351C31.2584 28.6555 30.6745 29.2395 29.9541 29.2395H25.3889C24.6685 29.2395 24.0845 28.6555 24.0845 27.9351Z" fill="white"/>
+                                <rect x="1.99756" y="1.5" width="62" height="62" rx="31" stroke="white" stroke-width="2"/>
+                            </svg> 
+                        </div>
+                        <h3>Бажаєте мати <b>пасивний дохід</b></h3>
+                        <p>Сонячні станції мають короткий термін окупності, що дозволить вам отримувати заробіток на продажі електроенергії, без вашої активної участі в цьому процесі.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="neededContainerPosition">
+                <img width="588" height="800" src="img/CentralArt.png" alt="UASUN" class="CentralArtDes">
+                <img width="288" height="423" src="img/CentralArtMobile.png" alt="UASUN" class="CentralArtMobile">
+            </div>
 
+        </div>
+    </section>
+
+    <section class="work">
+        <div class="wrapper">
+            <h2>Як ми працюємо</h2>
+            <div class="workSlider">
+                <div class="workSliderItem">
+                    <div class="workSliderItemLeft">
+                        <p>1 крок</p>
+                        <span>Заявка</span>
+                    </div>
+                    <div class="workSliderItemCenter">
+                        <p>Надішліть заявку, наш менеджер зв'яжеться з вами для обговорення деталей співпраці</p>
+                        <button class="buttonlinkTransition">НАДІСЛАТИ ЗАЯВКУ
+                            <img src="img/mailSlider.svg" alt="НАДІСЛАТИ ЗАЯВКУ">
+                        </button>
+                    </div>
+                    <div class="workSliderItemRight">
+                        <video src=""></video>
+                    </div>
+                </div>
+
+                 <div class="workSliderItem">
+                    <div class="workSliderItemLeft">
+                        <p>2 крок</p>
+                        <span>Підбір обладнання</span>
+                    </div>
+                    <div class="workSliderItemCenter">
+                        <p>Підбираємо найоптимальніші варіанти обладнання та технічні рішення для реалізації запиту</p>
+                    </div>
+                    <div class="workSliderItemRight">
+                        
+                    </div>
+                </div>
+
+                <div class="workSliderItem">
+                    <div class="workSliderItemLeft">
+                        <p>3 крок</p>
+                        <span>Укладання договору</span>
+                    </div>
+                    <div class="workSliderItemCenter">
+                        <p>Складаємо двосторонній договір, в якому прописуються умови роботи: цінова пропозиція, терміни виконання робіт, календарний плат внесення оплати</p>
+                    </div>
+                    <div class="workSliderItemRight">
+                        
+                    </div>
+                </div>
+
+                <div class="workSliderItem">
+                    <div class="workSliderItemLeft">
+                        <p>4 крок</p>
+                        <span>Проєктування</span>
+                    </div>
+                    <div class="workSliderItemCenter">
+                        <p>Готуємо індувідуальний план-проєкт, з урахуванням індивідуальних характеристик та параметрів</p>
+                    </div>
+                    <div class="workSliderItemRight">
+                        
+                    </div>
+                </div>
+
+                 <div class="workSliderItem">
+                    <div class="workSliderItemLeft">
+                        <p>5 крок</p>
+                        <span>Доставка обладнення</span>
+                    </div>
+                    <div class="workSliderItemCenter">
+                        <p>Наша компанія надає можливість доставки усього необхідного обладнання на об'єкт</p>
+                    </div>
+                    <div class="workSliderItemRight">
+                        
+                    </div>
+                </div>
+
+                <div class="workSliderItem">
+                    <div class="workSliderItemLeft">
+                        <p>6 крок</p>
+                        <span>монтаж</span>
+                    </div>
+                    <div class="workSliderItemCenter">
+                        <p>Виконуємо монтажні роботи по встановленню сонячної станції на об'єкті згідно з проєктом</p>
+                    </div>
+                    <div class="workSliderItemRight">
+                        
+                    </div>
+                </div>
+
+                <div class="workSliderItem">
+                    <div class="workSliderItemLeft">
+                        <p>7 крок</p>
+                        <span>Перевірка</span>
+                    </div>
+                    <div class="workSliderItemCenter">
+                        <p>Перед здачею проєкту ми обов'язково перевіряємо справність роботи сонячної станції на об'єкті</p>
+                    </div>
+                    <div class="workSliderItemRight">
+                        
+                    </div>
+                </div>
+
+                <div class="workSliderItem">
+                    <div class="workSliderItemLeft">
+                        <p>8 крок</p>
+                        <span>Супровід</span>
+                    </div>
+                    <div class="workSliderItemCenter">
+                        <p>Після здачі станції в експлуатацію, за потребою, наша команда проводить сервісне обслуговування та консультує клієнтів з питань роботи сонячного обладнання </p>
+                    </div>
+                    <div class="workSliderItemRight">
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 
 
@@ -103,6 +382,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script/slick.js"></script>
     <script src="script/sun.js"></script>
+    <script src="script/consultationOrder.js"></script>
+    <script src="script/burger.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            const sun = $('.sun');
+
+            function animateSun() {
+                sun.addClass('opened').delay(2000).queue(function (next) {
+                    $(this).removeClass('opened').addClass('closed');
+                    next();
+                }).delay(2000).queue(function (next) {
+                    $(this).removeClass('closed').addClass('opened');
+                    next();
+                    animateSun();
+                });
+            }
+
+            animateSun();
+        });
+    </script>
+
 
 
 
