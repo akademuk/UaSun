@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
     <link rel="stylesheet" href="style/slick.css">
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/fonts.css">
@@ -364,7 +365,52 @@
                 </div>
 
             </div>
+            <div class="navigationSlider">
+               <div class="navigationSliderArrow">
+                    <div class="workSliderPrev buttonlinkTransition">
+                        <img src="img/arrow.svg" alt="prev">
+                    </div>
+                    <div class="workSliderNext buttonlinkTransition">
+                        <img src="img/arrow.svg" alt="next">
+                    </div>
+               </div>
+               <div class="workSliderdots"></div>
+               <div class="bannerSliderDots"></div>
+               <div class="sliderCounter"></div>
+            </div>
         </div>
+    </section>
+
+    <section class="orderCalculation">
+        <div class="giant"></div>
+        <div class="wrapper">
+            <h2>Замовити розрахунок</h2>
+            <div class="orderCalculationTop">
+                <p>Розрахуйте вартість встановлення всіх необхідних компонентів для забезпечення продуктивної та ефективної роботи сонячних установок</p>
+                <div class="orderCalculationTopBlur">
+                    <div>Зв'яжіться з нами просто зараз та отримайте знижку</div>
+                    <div>5%</div>
+                </div>
+            </div>
+            <form action="">
+                <div class="orderCalculationFormTop">
+                    <input type="text" name="name" value="" placeholder="Ваше ім'я" required />
+                    <input type="text" name="phone" value="" placeholder="Контактний Телефон " required />
+                    <input type="text" name="phone" value="" placeholder="Введіть місто/регіон " required />
+                    <!-- <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response"> -->
+                    <!-- <div class="text-danger" id="recaptchaError"></div> -->
+                </div>
+                <div class="orderCalculationBottom">
+                    <p>оберіть Необхідну потужність</p>
+                    <input type="text" id="myRange" />
+                    <span class="orderCalculationBottomSpan">*Якщо Ви ще не визначились,  то залиште це значення порожніми</span>
+                </div>
+                <div class="orderCalculationBtn">
+                    <input class="btn submit" type="submit" name="submit" value="РОЗРАХУВАТИ ВАРТІСТЬ" />
+                </div>
+            </form>
+        </div>
+        <div class="moon"></div>
     </section>
 
 
@@ -378,34 +424,35 @@
 
 
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
     <script src="script/slick.js"></script>
     <script src="script/sun.js"></script>
     <script src="script/consultationOrder.js"></script>
     <script src="script/burger.js"></script>
+    <script src="script/workSlide.js"></script>
 
 
     <script>
-        $(document).ready(function () {
-            const sun = $('.sun');
+        $(document).ready(function() {
+  var myRange = $("#myRange");
+  
+  myRange.ionRangeSlider({
+    type: "single", // Одиночный ползунок
+    grid: true, // Отображение шкалы
+    from: 0, // Значение по умолчанию
+    values: ["0W", "120W", "180W", "200W", "250W"], // Доступные значения
+    step: 25, // Шаг значений
+    prettify: function(value) {
+      return value + "%"; // Функция для форматирования значения
+    },
+    onFinish: function(data) {
+      console.log(data.from); // Вывод значения в консоль
+    }
+  });
+});
 
-            function animateSun() {
-                sun.addClass('opened').delay(2000).queue(function (next) {
-                    $(this).removeClass('opened').addClass('closed');
-                    next();
-                }).delay(2000).queue(function (next) {
-                    $(this).removeClass('closed').addClass('opened');
-                    next();
-                    animateSun();
-                });
-            }
-
-            animateSun();
-        });
     </script>
-
-
 
 
 
