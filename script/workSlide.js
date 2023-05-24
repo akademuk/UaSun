@@ -20,10 +20,13 @@ $(document).ready(function () {
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     centerMode: false,
+                    infinite: false,
                     dots: true,
                     variableWidth: true,
                     appendDots: $('.workSliderdots'),
-                },
+                }
+            },
+            {
                 breakpoint: 576,
                 settings: {
                     vertical: false,
@@ -33,9 +36,10 @@ $(document).ready(function () {
                     dots: true,
                     variableWidth: true,
                     appendDots: $('.workSliderdots'),
-                },
+                }
             }
         ]
+        
     });
 
     var slideCount = slider.find('.slick-slide:not(.slick-cloned)').length;

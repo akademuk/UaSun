@@ -19,28 +19,30 @@ $(document).ready(function () {
                     slidesToScroll: 1,
                     centerMode: false,
                     infinite: true,
-                    variableWidth: true,
                     dots: true,
+                    variableWidth: true,
                     appendDots: $('.howWorkSliderdots')
-                },
+                }
+            },
+            {
                 breakpoint: 767,
                 settings: {
-                    vertical: false,
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     centerMode: false,
                     dots: true,
                     appendDots: $('.howWorkSliderdots')
-                },
+                }
+            },
+            {
                 breakpoint: 576,
                 settings: {
-                    vertical: false,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     centerMode: false,
                     dots: true,
                     appendDots: $('.howWorkSliderdots')
-                },
+                }
             }
         ]
     });
