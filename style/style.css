@@ -71,13 +71,13 @@ button {
 
 .buttonlinkTransition:hover {
     transition: all 0.3s;
-    background: #EDBF71;
+    background: #EDBF71 !important;
     cursor: pointer;
 }
 
 .buttonlinkTransition:active {
     transition: all 0.3s;
-    background: #F79C14;
+    background: #F79C14 !important;
     cursor: pointer;
 }
 
@@ -2497,14 +2497,93 @@ footer .wrapper {
     display: flex;
     flex-direction: column;
 }
-
-
-
-
-
-
-
-
+.headerReviewSentMain {
+    background: url(../img/whiteTexture.png), #2A2F35;
+    background-repeat: repeat;
+    background-size: auto;  
+    padding: 128px 0;
+}
+.headerReviewSentMain .headerReviewSentMainWrapper{
+    max-width: 1116px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.headerReviewSentMainIcon {
+    margin-bottom: 32px;
+}
+.headerReviewSentMainWrapper h1 {
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 120%;
+    color: #FFF2E1;
+    margin-bottom: 32px;
+}
+.headerReviewSentMainWrapper span {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    color: #F79C14;
+}
+.headerReviewSentMainWrapper p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    color: #FFFFFF;
+    width: 95%;
+    text-align: center;
+    margin-bottom: 32px;
+}
+.headerReviewSentMainBtn {
+    display: flex;
+    align-items: center;
+}
+.headerReviewSentMainBtn a:nth-of-type(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 289px;
+    height: 72px;
+    background: #F79C14;
+    border-radius: 100px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #2A2F35;
+    text-decoration: none;
+    margin-right: 24px;
+}
+.headerReviewSentMainBtn a:nth-of-type(1) img {
+    margin-right: 8px;
+}
+.headerReviewSentMainBtn a:nth-of-type(2) {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 219px;
+    height: 72px;
+    border: 2px solid #FFFFFF;
+    border-radius: 100px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.headerReviewSentMainBtn a:nth-of-type(2) img {
+    margin-left: 8px;
+}
+video {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
 
 
 
@@ -3951,6 +4030,47 @@ footer .wrapper {
         margin-top: 64px;
         width: 365px;
     }
+    .headerReviewSentMain {
+        padding: 128px 64px;
+    }
+    .headerReviewSentMainWrapper {
+        max-width: 100%;
+    }
+    .headerReviewSentMainWrapper h1 {
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 130%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #FFF2E1;
+    }
+    .headerReviewSentMainWrapper span {
+        font-size: 16px;
+        line-height: 140%;
+        margin-bottom: 8px;
+    }
+    .headerReviewSentMainWrapper p {
+        font-size: 12px;
+        line-height: 150%;
+        margin-bottom: 32px;
+    }
+    .headerReviewSentMainBtn {
+        flex-direction: column;
+    }
+    .headerReviewSentMainBtn a:nth-of-type(1) {
+        width: 267px;
+        height: 50px;
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+    .headerReviewSentMainBtn a:nth-of-type(2) {
+        width: 197px;
+        height: 50px;
+    }
+    .workSliderItemRight {
+        width: 100%;
+    }
 }
 
 @media(max-width: 767px) {
@@ -4214,6 +4334,9 @@ footer .wrapper {
     .Copyright {
         font-size: 10px;
         line-height: 13px;
+    }
+    .headerReviewSentMain {
+        padding: 128px 32px;
     }
 }
 
@@ -4523,5 +4646,11 @@ footer .wrapper {
     }
     .Copyright {
         width: 100%;
+    }
+    .headerReviewSentMain {
+        padding: 64px 16px;
+    }
+    .headerReviewSentMainWrapper span {
+        text-align: center;
     }
 }
