@@ -19,7 +19,7 @@ jQuery(document).ready(function ($) {
 
 
     // форма с проверкой
-    $("#ajax-contact-form").validate({
+    $("#ajax-contact-form2").validate({
         errorClass: "novalid",
         errorElement: "span",
         success: function (label) {
@@ -38,9 +38,8 @@ jQuery(document).ready(function ($) {
                 success: function (msg) {
                     if (msg == 'OK') {
                         result = '<div class="notification_ok">Ваше повідомлення надіслано</div>';
-                        $("#fields").hide();
                         /* если нужно перенаправление */
-                        //window.location.href = "";
+                        window.location.href = "applicationSend.html";
                     } else {
                         result = msg;
                     }
