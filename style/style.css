@@ -186,7 +186,6 @@ header button {
     background-size: auto;
     width: 100vw;
     height: 1000px;
-    mix-blend-mode: overlay;
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
@@ -5053,7 +5052,5 @@ video {
     .orderCalculation {
         padding-bottom: 94px;
     }
-    .banner {
-        background: red;
-    }
+
 }
