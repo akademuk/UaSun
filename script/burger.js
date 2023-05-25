@@ -10,3 +10,9 @@ $('.close').click(function() {
     $('.burger').removeClass('change');
 });
 
+$('.burgerClose').click(function() {
+    $('.menu').removeClass('open_menu');
+    $('.body').removeClass('active');
+    $('.burger').removeClass('change');
+});
+

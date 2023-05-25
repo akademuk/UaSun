@@ -28,27 +28,27 @@
             <div class="menuContentNav">
                 <ul>
                     <li>
-                        <a href="#">
+                        <a class="burgerClose" href="#">
                             <img width="18" height="18" src="img/home.svg" alt="home">
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="linkTransition">
+                        <a class="burgerClose" href="#AboutUs" class="linkTransition">
                             ПРО НАС
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="linkTransition">
+                        <a class="burgerClose" href="#Buy" class="linkTransition">
                             ПРИДБАТИ
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="linkTransition">
+                        <a class="burgerClose" href="#Contact" class="linkTransition">
                             КОНТАКТИ
                         </a>
                     </li>
                 </ul>
-                <button class="buttonlinkTransition">
+                <button class="burgerClose modal-trigger buttonlinkTransition">
                     РОЗРАХУВАТИ ВАРТІСТЬ
                     <img src="img/message.svg" alt="message">
                 </button>
@@ -180,17 +180,17 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="linkTransition">
+                        <a class="burgerClose" href="#AboutUs" class="linkTransition">
                             ПРО НАС
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="linkTransition">
+                        <a class="burgerClose" href="#Buy" class="linkTransition">
                             ПРИДБАТИ
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="linkTransition">
+                        <a class="burgerClose" href="#Contact" class="linkTransition">
                             КОНТАКТИ
                         </a>
                     </li>
@@ -481,7 +481,7 @@
         </div>
     </section>
 
-    <section class="orderCalculation">
+    <section class="orderCalculation" id="Buy">
         <div class="giant"></div>
         <div class="wrapper">
             <h2>Замовити розрахунок</h2>
@@ -788,7 +788,7 @@
         </div>
     </section>
 
-    <section class="aboutUs">
+    <section class="aboutUs" id="AboutUs">
         <div class="aboutUsPosition">
             <div class="aboutUsPosition1"></div>
             <div class="aboutUsPosition2"></div>
@@ -1176,7 +1176,7 @@
         <div class="reviewsSliderdots"></div>
     </section>
 
-    <section class="maps">
+    <section class="maps" id="Contact">
         <div class="mapsImg">
             <img src="img/map.png" alt="map">
         </div>
@@ -1228,17 +1228,17 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="linkTransition">
+                        <a class="burgerClose" href="#AboutUs" class="linkTransition">
                             ПРО НАС
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="linkTransition">
+                        <a class="burgerClose" href="#Buy" class="linkTransition">
                             ПРИДБАТИ
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="linkTransition">
+                        <a class="burgerClose" href="#Contact" class="linkTransition">
                             КОНТАКТИ
                         </a>
                     </li>
@@ -1338,7 +1338,27 @@
 
     </script>
 
+    <script>
+        $(document).ready(function() {
+            // При клике на ссылку с якорем
+            $('a[href^="#"]').on('click', function(event) {
+                // Отменяем стандартное поведение ссылки
+                event.preventDefault();
 
+                // Получаем целевой якорь
+                var target = $(this.hash);
+
+                // Проверяем, что целевой якорь существует на странице
+                if (target.length) {
+                // Анимированная прокрутка до целевого якоря
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 800); // Здесь можно настроить скорость анимации
+                }
+            });
+            });
+
+    </script>
 
 </body>
 
