@@ -98,10 +98,10 @@
                     </div>
                 </div>
                 <div class="modalMainRight">
-                    <div id="note"></div>
-                    <form id="ajax-contact-form2" action="" data-form-validate="true">
+                    <div id="note2"></div>
+                    <form id="ajax-contact-form2" action="" data-form-validate="true" class="clientForm">
                         <input type="text" name="name" value="" placeholder="Ім'я" required/>
-                        <input type="text" name="phone" value="" placeholder="Телефон" required />
+                        <input type="tel" name="phone" value="" placeholder="Телефон" required />
                         <textarea name="message" rows="5" cols="25" placeholder="Текст відгуку" required></textarea>
                         
                         <input name="url" type="hidden">
@@ -149,10 +149,13 @@
                             5%
                         </div>
                     </div>
-                    <form id="ajax-contact-form" action="" data-form-validate="true">
+                    <div id="note"></div>
+                    <form id="ajax-contact-form" action="" data-form-validate="true" class="clientForm">
                         <input type="text" name="name" value="" placeholder="Ваше ім'я" required />
-                        <input type="text" name="phone" value="" placeholder="Контактний Телефон " required />
-                        <input type="text" name="phone" value="" placeholder="Введіть місто/регіон " required />
+                        <input type="tel" name="phone" value="" placeholder="Контактний Телефон " required />
+                        <input type="text" name="region" value="" placeholder="Введіть місто/регіон" required />
+
+                        <input name="url" type="hidden">
                         <!-- <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response"> -->
                         <input class="btn submit" type="submit" name="submit" value="Надіслати" />
                         <!-- <div class="text-danger" id="recaptchaError"></div> -->
@@ -279,7 +282,7 @@
                     </div>
                 </div>
                 <div class="neededContainerRight">
-                    <div class="neededContainerLeftContainer">
+                    <div class="neededContainerLeftContainer neededContainerLeftContainer2">
                         <div class="neededContainerIcon">
                             <svg width="65" height="65" viewBox="0 0 65 65" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -290,7 +293,7 @@
                                     stroke-width="2" />
                             </svg>
                         </div>
-                        <h3>Прагнете долучити свій бізнес до <b>екологічного виробництва</b></h3>
+                        <h3 class="neededContainerRighth3">Прагнете долучити свій бізнес до <b>екологічного виробництва</b></h3>
                         <p>Сонячні електростанції є екологічно чистим джерелом енергії. Впроваджуючи такі системи у
                             роботу свого бізнесу, ви дбаєте про екологію, а також підвищуєте свою репутацію серед
                             конкурентів.</p>
@@ -317,7 +320,7 @@
                 <img width="288" height="423" src="img/CentralArtMobile.png" alt="UASUN" class="CentralArtMobile">
             </div>
         </div>
-        <div class="gradient">
+        <!-- <div class="gradient">
             <div class="gradientLeft">
                
             </div>
@@ -327,7 +330,7 @@
                 <div class="gradientRight3"></div>
                 <div class="gradientRight4"></div>
             </div>
-        </div>
+        </div> -->
     </section>
 
     <section class="work">
@@ -355,7 +358,7 @@
                         <p>2 крок</p>
                         <span>Підбір обладнання</span>
                     </div>
-                    <div class="workSliderItemCenter">
+                    <div class="workSliderItemCenter workSliderItemCenter2">
                         <p>Підбираємо найоптимальніші варіанти обладнання та технічні рішення для реалізації запиту</p>
                     </div>
                     <div class="workSliderItemRight">
@@ -368,7 +371,7 @@
                         <p>3 крок</p>
                         <span>Укладання договору</span>
                     </div>
-                    <div class="workSliderItemCenter">
+                    <div class="workSliderItemCenter workSliderItemCenter2">
                         <p>Складаємо двосторонній договір, в якому прописуються умови роботи: цінова пропозиція, терміни
                             виконання робіт, календарний плат внесення оплати</p>
                     </div>
@@ -382,7 +385,7 @@
                         <p>4 крок</p>
                         <span>Проєктування</span>
                     </div>
-                    <div class="workSliderItemCenter">
+                    <div class="workSliderItemCenter workSliderItemCenter2">
                         <p>Готуємо індувідуальний план-проєкт, з урахуванням індивідуальних характеристик та параметрів
                         </p>
                     </div>
@@ -396,7 +399,7 @@
                         <p>5 крок</p>
                         <span>Доставка обладнення</span>
                     </div>
-                    <div class="workSliderItemCenter">
+                    <div class="workSliderItemCenter workSliderItemCenter2">
                         <p>Наша компанія надає можливість доставки усього необхідного обладнання на об'єкт</p>
                     </div>
                     <div class="workSliderItemRight">
@@ -409,7 +412,7 @@
                         <p>6 крок</p>
                         <span>монтаж</span>
                     </div>
-                    <div class="workSliderItemCenter">
+                    <div class="workSliderItemCenter workSliderItemCenter2">
                         <p>Виконуємо монтажні роботи по встановленню сонячної станції на об'єкті згідно з проєктом</p>
                     </div>
                     <div class="workSliderItemRight">
@@ -422,7 +425,7 @@
                         <p>7 крок</p>
                         <span>Перевірка</span>
                     </div>
-                    <div class="workSliderItemCenter">
+                    <div class="workSliderItemCenter workSliderItemCenter2">
                         <p>Перед здачею проєкту ми обов'язково перевіряємо справність роботи сонячної станції на об'єкті
                         </p>
                     </div>
@@ -436,7 +439,7 @@
                         <p>8 крок</p>
                         <span>Супровід</span>
                     </div>
-                    <div class="workSliderItemCenter">
+                    <div class="workSliderItemCenter workSliderItemCenter2">
                         <p>Після здачі станції в експлуатацію, за потребою, наша команда проводить сервісне
                             обслуговування та консультує клієнтів з питань роботи сонячного обладнання </p>
                     </div>
@@ -474,22 +477,23 @@
                     <div>5%</div>
                 </div>
             </div>
-            <form action="">
+            <form id="ajax-contact-form3" action="" data-form-validate="true" class="clientForm">
                 <div class="orderCalculationFormTop">
                     <input type="text" name="name" value="" placeholder="Ваше ім'я" required />
-                    <input type="text" name="phone" value="" placeholder="Контактний Телефон " required />
-                    <input type="text" name="phone" value="" placeholder="Введіть місто/регіон " required />
+                    <input type="tel" name="phone" value="" placeholder="Контактний Телефон " required />
+                    <input type="text" name="region" value="" placeholder="Введіть місто/регіон " required />
                     <!-- <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response"> -->
                     <!-- <div class="text-danger" id="recaptchaError"></div> -->
+                     <input name="url" type="hidden">
                 </div>
                 <div class="orderCalculationBottom">
                     <p>оберіть Необхідну потужність</p>
-                    <input type="text" id="myRange" />
+                    <input type="text" id="myRange" name="range" />
                     <span class="orderCalculationBottomSpan">*Якщо Ви ще не визначились, то залиште це значення
                         порожніми</span>
                 </div>
                 <div class="orderCalculationBtn">
-                    <input class="btn submit" type="submit" name="submit" value="РОЗРАХУВАТИ ВАРТІСТЬ" />
+                    <input class="btn submit orderCalculationBtnSub" type="submit" name="submit" value="РОЗРАХУВАТИ ВАРТІСТЬ" />
                 </div>
             </form>
         </div>
@@ -1225,7 +1229,7 @@
                 </ul>
                 <button class="buttonlinkTransition modal-trigger">
                     РОЗРАХУВАТИ ВАРТІСТЬ
-                    <img width="24" height="24" src="img/message.svg" alt="message">
+                    <img width="16.58" height="17.55" src="img/message.svg" alt="message">
                 </button>
                 <p>Copyright © 2023 uasun.com.ua — Solar panels and accessories.
                     All Rights Reserved.</p>
@@ -1270,8 +1274,8 @@
                 type: "single", // Одиночный ползунок
                 grid: true, // Отображение шкалы
                 from: 0, // Значение по умолчанию
-                values: ["0W", "120W", "180W", "200W", "250W"], // Доступные значения
-                step: 25, // Шаг значений
+                values: ["5W", "10W","15W","20W","25W","30W","35W","40W","45W","50W","55W","60W","65W","70W","75W","80W","85W","90W","95W","100W","105W","110W","115W","120W","125W","130W","135W","140W","145W", "150W", "155W", "160W", "165W", "170W", "175W", "180W", "185W", "190W", "195W", "200W"], // Доступные значения
+                step: 5, // Шаг значений
                 prettify: function (value) {
                     return value + "%"; // Функция для форматирования значения
                 },

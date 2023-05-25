@@ -3,7 +3,7 @@ $(document).ready(function () {
     var counter = $('.howWorksliderCounter');
 
     slider.slick({
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 1,
         arrows: true,
         infinite: true,

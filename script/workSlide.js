@@ -9,7 +9,6 @@ $(document).ready(function () {
         arrows: true,
         // infinite: false,
         centerMode: true,
-        centerPadding: '0px',
         prevArrow: '.workSliderPrev',
         nextArrow: '.workSliderNext',
         responsive: [

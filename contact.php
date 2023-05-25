@@ -2,50 +2,52 @@
 
 define('SITE_KEY', '6LeS8ygmAAAAAHevT7-0kqokA8gd4n8e2pOxYnvI'); /* ключ сайта reCaptcha */
 define('SECRET_KEY', '6LeS8ygmAAAAAEPOT1uc8XGNwLUWAu8Z8Uewjeyg'); /* секретный ключ reCaptcha */
-define ("TELEGRAM_TOKEN", "");
-define ("TELEGRAM_CHAT_ID", "");
-define ("SUBJECT", "Лист з сайту Test"); /* тема письма */
-define ("EMAIL_TO", "golofaev73@gmail.com"); /* куда отправляем */ 
+define ("TELEGRAM_TOKEN", "5995280641:AAHDBaUH2b9TLM8tOmVOnsnzv79_8a8rrsk");
+define ("TELEGRAM_CHAT_ID", "-1001830660169");
+define ("SUBJECT", "Лист з сайту UaSun"); /* тема письма */
+define ("EMAIL_TO", "akademuk24@gmail.com"); /* куда отправляем */ 
 
 
 $post = (!empty($_POST)) ? true : false;
 
 if ($post) {
     $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
+    // $email = htmlspecialchars($_POST['email']);
     $phone = htmlspecialchars($_POST['phone']);
     $message = htmlspecialchars($_POST['message']);
+    $region = htmlspecialchars($_POST['region']);
+    $range = htmlspecialchars($_POST['range']);
     $call = $_POST['call'];
     $urlAll = $_POST['url'];
     $error = '';
 
     /*Создаем функцию которая делает запрос на google сервис*/
-    function getCaptcha($SecretKey)
-    {
-        $Response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . SECRET_KEY . "&response={$SecretKey}");
-        $Return = json_decode($Response);
-        return $Return;
-    }
+    // function getCaptcha($SecretKey)
+    // {
+    //     $Response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . SECRET_KEY . "&response={$SecretKey}");
+    //     $Return = json_decode($Response);
+    //     return $Return;
+    // }
 
     /* Производим запрос на google сервис и записываем ответ */
-    $Return = getCaptcha($_POST['g-recaptcha-response']);
+    // $Return = getCaptcha($_POST['g-recaptcha-response']);
     /*Выводим на экран полученный ответ*/
     //var_dump($Return);
 
     /*Если запрос удачно отправлен и значение score больше 0,5 выполняем код*/
-    if ($Return->success == true && $Return->score > 0.5) {
-        $captcha_success = "captchaOk";
-        //echo $captcha_success;
-    } else {
-        $captcha_success = "captchaError";
-        //echo $captcha_success;
-        $error .= 'ошибка reCaptcha';
-    }
+    // if ($Return->success == true && $Return->score > 0.5) {
+    //     $captcha_success = "captchaOk";
+    //     //echo $captcha_success;
+    // } else {
+    //     $captcha_success = "captchaError";
+    //     //echo $captcha_success;
+    //     $error .= 'ошибка reCaptcha';
+    // }
 
 
     
 	// сообщение, которое будет отправлено в Telegram
-	$text = "Новое сообщение с сайта:\n\nІм\'я: $name\nТелефон: $phone\nEmail: $email\nПовідомлення: $message\nКак связаться: $call\nСсылка: $urlAll";
+	$text = "Новое сообщение с сайта:\n\nІм\'я: $name\nТелефон: $phone\nПовідомлення: $message\nРегион: $region\nRange: $range\nСсылка: $urlAll";
 
 
     if (!$error) {
@@ -68,22 +70,20 @@ if ($post) {
                     <td>' . $phone . '</td>
                     </tr>
                     <tr>
-                    <tr>
-                    <td>Email</td>
-                    <td>' . $email . '</td>
-                    </tr>
-                    <tr>
-                    <tr>
                     <td>Повідомлення</td>
                     <td>' . $message . '</td>
                     </tr>
                     <tr>
-                    <td>Як зв\'язатись?</td>
-                    <td>' . $call . '</td>
-                    </tr>
-                    <tr>
                     <td>Посилання</td>
                     <td>' . $urlAll . '</td>
+                    </tr>
+                    <tr>
+                    <td>Як зв\'язатись?</td>
+                    <td>' . $region . '</td>
+                    </tr>
+                    <tr>
+                    <td>Як зв\'язатись?</td>
+                    <td>' . $range . '</td>
                     </tr>
                 </table>
                 </body>

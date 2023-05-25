@@ -22,6 +22,7 @@ $(document).ready(function () {
                     centerMode: false,
                     infinite: false,
                     dots: true,
+                    variableWidth: true,
                     appendDots: $('.reviewsSliderdots'),
                 }
             },
@@ -45,6 +46,7 @@ $(document).ready(function () {
                     slidesToScroll: 1,
                     centerMode: false,
                     dots: true,
+                    variableWidth: true,
                     appendDots: $('.reviewsSliderdots'),
                 }
             }

@@ -7,6 +7,7 @@ $(document).ready(function() {
         slidesToScroll: 1,
         dots: true,
         arrows: false,
+        variableWidth: true,
         appendDots: $('.advantagesContainerdots'),
         responsive: [
           {
