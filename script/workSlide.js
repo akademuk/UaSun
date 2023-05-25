@@ -52,7 +52,10 @@ $(document).ready(function () {
 
         // Воспроизведение видео в центральном слайде
         if (centerVideo.length > 0) {
-            centerVideo.get(0).play();
+            // Проверка типа устройства
+            if (!isMobileDevice()) {
+                centerVideo.get(0).play();
+            }
         }
     }
 
@@ -61,7 +64,6 @@ $(document).ready(function () {
             playCenterVideo();
         }, 100);
     });
-    
 
     // Запуск видео при загрузке страницы и при изменении размера окна
     playCenterVideo();
@@ -89,7 +91,9 @@ $(document).ready(function () {
         var updatedCounterText = '<span class="slideIndex">' + currentSlideIndex + '</span> <span class="slideSeparator">|</span> <span class="slideTotal slideCount">' + slideCount + '</span>';
         counter.html(updatedCounterText);
     });
+
+    // Проверка типа устройства (мобильное устройство)
+    function isMobileDevice() {
+        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    }
 });
-
-
-
