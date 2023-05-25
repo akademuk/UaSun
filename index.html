@@ -74,10 +74,50 @@
         </div>
     </div>
 
+    <div class="modal2">
+        <div class="modal-content">
+            <div class="modalHeader">
+                <button class="close-btn2 buttonlinkTransition">
+                    <svg width="16" height="16" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+                            fill="#000000" />
+                    </svg>
+                </button>
+                <div class="modalHeaderContent modalHeaderContent2">
+                    <h2>Залишити відгук про</h2>
+                    <img width="128" height="40" src="img/logo.svg" alt="">
+                </div>
+            </div>
+            <div class="modalMain">
+                <div class="modalMainLeft modalMainLeft2">
+                    <h3>Замовте консультацію нашого експерта зараз!</h3>
+                    <div class="modalMainText">
+                        Ми будемо дуже вдячні, якщо <b>Ви залишите відгук</b> про нашу компанію прямо зараз на нашому сайті. Ваш відгук допоможе нам покращити якість наших послуг та забезпечити нашим клієнтам ще більш високий рівень сервісу.
+                    </div>
+                </div>
+                <div class="modalMainRight">
+                    <form id="ajax-contact-form2" action="" data-form-validate="true">
+                        <input type="text" name="name" value="" placeholder="Ім'я" required/>
+                        <input type="text" name="phone" value="" placeholder="Телефон" required />
+                        <textarea name="message" rows="5" cols="25" placeholder="Текст відгуку" required></textarea>
+        
+                        <!-- <input name="url" type="hidden">
+                        <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+         -->
+                        <input class="submit" type="submit" name="submit" value="Відправити" />
+        
+                        <!-- <div class="text-danger" id="recaptchaError"></div> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="modal">
         <div class="modal-content">
             <div class="modalHeader">
-                <button class="close-btn">
+                <button class="close-btn buttonlinkTransition">
                     <svg width="16" height="16" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
@@ -307,7 +347,7 @@
                         </button>
                     </div>
                     <div class="workSliderItemRight">
-                        <video class="autoplay-video" src="img/sun1.m4v"></video>
+                        <video class="autoplay-video" src="img/1.mp4"></video>
                     </div>
                 </div>
 
@@ -320,7 +360,7 @@
                         <p>Підбираємо найоптимальніші варіанти обладнання та технічні рішення для реалізації запиту</p>
                     </div>
                     <div class="workSliderItemRight">
-                        <video class="autoplay-video" src="img/sun2.m4v"></video>
+                        <video class="autoplay-video" src="img/2.mp4"></video>
                     </div>
                 </div>
 
@@ -334,7 +374,7 @@
                             виконання робіт, календарний плат внесення оплати</p>
                     </div>
                     <div class="workSliderItemRight">
-                        <video class="autoplay-video" src="img/sun3.m4v"></video>
+                        <video class="autoplay-video" src="img/3.mp4"></video>
                     </div>
                 </div>
 
@@ -348,7 +388,7 @@
                         </p>
                     </div>
                     <div class="workSliderItemRight">
-                        <video class="autoplay-video" src="img/sun4.m4v"></video>
+                        <video class="autoplay-video" src="img/4.mp4"></video>
                     </div>
                 </div>
 
@@ -361,7 +401,7 @@
                         <p>Наша компанія надає можливість доставки усього необхідного обладнання на об'єкт</p>
                     </div>
                     <div class="workSliderItemRight">
-                        <video class="autoplay-video" src="img/sun5.m4v"></video>
+                        <video class="autoplay-video" src="img/5.mp4"></video>
                     </div>
                 </div>
 
@@ -374,7 +414,7 @@
                         <p>Виконуємо монтажні роботи по встановленню сонячної станції на об'єкті згідно з проєктом</p>
                     </div>
                     <div class="workSliderItemRight">
-                        <video class="autoplay-video" src="img/sun6.m4v"></video>
+                        <video class="autoplay-video" src="img/6.mp4"></video>
                     </div>
                 </div>
 
@@ -388,7 +428,7 @@
                         </p>
                     </div>
                     <div class="workSliderItemRight">
-                        <video class="autoplay-video" src="img/sun7.m4v"></video>
+                        <video class="autoplay-video" src="img/7.mp4"></video>
                     </div>
                 </div>
 
@@ -402,7 +442,7 @@
                             обслуговування та консультує клієнтів з питань роботи сонячного обладнання </p>
                     </div>
                     <div class="workSliderItemRight">
-                        <video class="autoplay-video" src="img/sun8.m4v"></video>
+                        <video class="autoplay-video" src="img/8.mp4"></video>
                     </div>
                 </div>
 
@@ -946,7 +986,7 @@
                     Ваш відгук допоможе нам покращити якість наших послуг та забезпечити нашим клієнтам ще більш високий
                     рівень сервісу.
                 </div>
-                <button>
+                <button class="linkTransition modal-trigger2">
                     ЗАЛИШИТИ ВІДГУК
                     <img width="18" height="18" src="img/reviewsIcon.svg" alt="ЗАЛИШИТИ ВІДГУК">
                 </button>
@@ -1126,7 +1166,7 @@
                 <img src="img/Dot.svg" alt="">
             </div>
             <div class="mapPositionText">
-                <img width="78" height="24" src="img/logoMap.svg" alt="UASUN">
+                <img width="78" height="24" src="img/LogoMap.svg" alt="UASUN">
                 <p>Одеса, вулиця Соборна, 12, Хмельницький, Україна</p>
             </div>
         </div>
@@ -1217,6 +1257,7 @@
     <script src="script/advantages.js"></script>
     <script src="script/reviewsSlider.js"></script>
     <script src="script/openSliderItem.js"></script>
+    <script src="script/formReviews.js"></script>
 
 
     <script>
@@ -1252,30 +1293,26 @@
 
     <script>
 
-        $(document).ready(function () {
-            var sun = $('.sun');
-            var bannerImg = $('.bannerImg');
+      // Функция для добавления/удаления класса "active"
+      function toggleClass(elements, className) {
+      for (var i = 0; i < elements.length; i++) {
+        elements[i].classList.toggle(className);
+      }
+    }
 
-            sun.css({
-                width: '650px',
-                height: '650px',
-                borderRadius: '50%',
-                background: 'radial-gradient(60% 60% at 40% 16.25%, #F79C14 0%, #EA8135 53.05%, #E68858 85.42%, #F29A77 100%)',
-                boxShadow: '0px 13px 20px 15px rgba(213, 107, 61, 0.22), -29px 80px 249px 50px rgba(230, 112, 64, 0.8)',
-                filter: 'blur(2.5px)',
-                position: 'absolute',
-                left: 'calc(1000px - 2vw)',
-                right: 0,
-                transform: 'translate(100%, 100%)',
-                animation: 'sunAnimation 9.5s infinite'
-            });
+    // Функция для установки интервала появления/исчезновения
+    function startAnimation() {
+      var bannerImgs = document.getElementsByClassName('bannerImg');
+      var suns = document.getElementsByClassName('sun');
 
-            bannerImg.css({
+      setInterval(function() {
+        toggleClass(bannerImgs, 'active');
+        toggleClass(suns, 'active');
+      }, 4500);
+    }
 
-                filter: 'grayscale(0%)',
-                animation: 'grayscaleAnimation 9.5s infinite'
-            });
-        });
+    // Запуск анимации после задержки
+    setTimeout(startAnimation, 1000);
 
     </script>
 

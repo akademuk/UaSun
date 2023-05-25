@@ -186,7 +186,7 @@ header button {
     max-width: 100vw;
 }
 
-/* .sun {
+.sun {
     width: 650px;
     height: 650px;
     border-radius: 50%;
@@ -196,32 +196,25 @@ header button {
     position: absolute;
     left: calc(1000px - 2vw);
     right: 0;
-    animation-name: sunOpen;
-    animation-duration: 1s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-} */
-
-.sun.opened {
-    transform: translate(10%, 8%);
-    transition-delay: 0s;
-}
-
-.sun.closed {
     transform: translate(100%, 100%);
-    transition-delay: 0s;
+    transition: all 2.5s;
 }
 
-/* .sun:after {
+.sun.active {
+    transform: translate(0%, 0%);
+    transition: all 2.5s;
+}
+
+.sun:after {
     content: "";
     position: absolute;
     width: 880px;
     height: 585px;
-    right: 0px;
-    top: 5px;
+    left: -100px;
+    top: -50px;
     background: radial-gradient(43.19% 52.32% at 50% 50%, #F79C15 0%, rgba(247, 156, 21, 0) 100%);
     z-index: -1;
-} */
+}
 .banner::after {
     content: "";
     background: url(../img/whiteTexture.png), #1E2126;
@@ -234,11 +227,6 @@ header button {
     bottom: 0;
 }
 
-.bannerImg.animation {
-    animation-name: grayscaleAnimation;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
-}
 
 .bannerImg {
     position: absolute;
@@ -247,16 +235,20 @@ header button {
     width: 1233px;
     height: 766px;
     z-index: 2;
-    animation: grayscaleAnimation 9.5s forwards;
+    filter: grayscale(100%);
+    transition: all 2.5s;
 }
-
+.bannerImg.active {
+    filter: grayscale(0%);
+    transition: all 2.5s;
+}
 .bannerImg img {
     width: 1233px;
     height: 766px;
     object-fit: cover;
 }
 
-.bannerImg.active {
+/* .bannerImg.active {
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
@@ -264,28 +256,23 @@ header button {
     filter: grayscale(100%);
     filter: gray;
     transition: all 5s;
-}
+} */
 
 
 
 
 @keyframes grayscaleAnimation {
     0% {
-        filter: grayscale(100%);
-    }
-
-    33.33% {
         filter: grayscale(0%);
     }
-
-    44.44% {
-        filter: grayscale(0%);
-    }
-
-    66.66% {
+    100% {
         filter: grayscale(100%);
     }
-
+}
+@keyframes grayscaleAnimation2 {
+    0% {
+        filter: grayscale(0%);
+    }
     100% {
         filter: grayscale(100%);
     }
@@ -296,23 +283,21 @@ header button {
         transform: translate(100%, 100%);
     }
 
-    33.33% {
+    100% {
         transform: translate(10%, 8%);
     }
 
-    44.44% {
-        transform: translate(10%, 8%);
-    }
-
-    66.66% {
-        transform: translate(100%, 100%);
-    }
-
+}
+@keyframes sunClose {
     100% {
         transform: translate(100%, 100%);
     }
-}
 
+    0% {
+        transform: translate(10%, 8%);
+    }
+
+}
 
 
 
@@ -646,7 +631,23 @@ header ul li:nth-of-type(1) {
 }
 
 
+.modal2 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    overflow: hidden;
+}
 
+.modal2.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 .modal {
@@ -761,12 +762,15 @@ header ul li:nth-of-type(1) {
 
 .modalMainText b {
     color: #F79C14;
-    font-weight: 200;
-    font-size: 12px;
+    font-weight: 400;
+    font-size: 16px;
     line-height: 150%;
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
-
+.modalMainLeft2 {
+    margin-top: -100px;
+}
 .modalMainRightTop {
     display: flex;
     align-items: center;
@@ -806,6 +810,10 @@ header ul li:nth-of-type(1) {
     display: flex;
     flex-direction: column;
 }
+#ajax-contact-form2 {
+    display: flex;
+    flex-direction: column;
+}
 
 #ajax-contact-form input {
     display: flex;
@@ -826,7 +834,64 @@ header ul li:nth-of-type(1) {
     color: #81878E;
     margin-bottom: 16px
 }
-
+#ajax-contact-form2 input {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px;
+    height: 49px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    padding-left: 37px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #81878E;
+    margin-bottom: 16px
+}
+#ajax-contact-form2 textarea {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px;
+    height: 164px;
+    background: url(../img/textArea.svg), #FFFFFF;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 16px 16px;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    padding-left: 37px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #81878E;
+    margin-bottom: 16px;
+    font-family: eUkraine;
+}
+#ajax-contact-form2 textarea::placeholder {
+    font-family: eUkraine;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    color: #81878E;
+    text-transform: uppercase;
+}
+#ajax-contact-form2 input::placeholder {
+    font-family: eUkraine;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    color: #81878E;
+    text-transform: uppercase;
+}
 #ajax-contact-form input:nth-of-type(1) {
     background: url(../img/name.svg), #FFFFFF;
     background-repeat: no-repeat;
@@ -869,6 +934,41 @@ header ul li:nth-of-type(1) {
     margin-top: 32px !important;
 }
 
+#ajax-contact-form2 input:nth-of-type(1) {
+    background: url(../img/name.svg), #FFFFFF;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 16px 16px;
+}
+
+#ajax-contact-form2 input:nth-of-type(2) {
+    background: url(../img/phone.svg), #FFFFFF;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 16px 16px;
+}
+
+
+
+#ajax-contact-form2 .submit {
+    box-sizing: border-box !important;
+    padding: 16px !important;
+    width: 144px !important;
+    height: 50px !important;
+    background: url(../img/message2.svg), #F79C14 !important;
+    background-repeat: no-repeat !important;
+    background-size: auto !important;
+    background-position: 108px 16px !important;
+    border-radius: 100px !important;
+    margin-left: auto !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    line-height: 17px !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+    color: #2A2F35 !important;
+    margin-top: 32px !important;
+}
 .needed {
     background: url(../img/whiteTexture.png), #1E2126;
     background-repeat: repeat;
@@ -877,7 +977,6 @@ header ul li:nth-of-type(1) {
     z-index: 3;
     margin-top: -2px;
 }
-
 .needed .wrapper {
     max-width: 1116px;
     margin: 0 auto;
@@ -1608,6 +1707,8 @@ header ul li:nth-of-type(1) {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 4px;
     height: 500px;
+    display: flex !important;
+    flex-direction: column;
 }
 
 .howWorkSlider .slick-slide {
@@ -1619,11 +1720,14 @@ header ul li:nth-of-type(1) {
 .howWorkSlider .slick-slide.slick-center {
     opacity: 1;
 }
-
+.howWorkSliderItemImg {
+    flex-grow: 1;
+}
 .howWorkSliderItemImg img {
     max-width: 100%;
     width: 100%;
     object-fit: cover;
+    height: 100%;
 }
 
 .howWorkSliderItem>span {
@@ -2257,6 +2361,7 @@ header ul li:nth-of-type(1) {
     color: #5D9EFF;
     background: transparent;
     border: none;
+    text-decoration: none;
     padding-left: 0;
 }
 
@@ -2978,7 +3083,10 @@ video {
         line-height: 130%;
         margin-right: 8px;
     }
-
+    .modal2.show {
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
     .sunBtnToggleClass.active p:nth-of-type(2) {
         font-weight: 400;
         font-size: 12px;
@@ -3158,10 +3266,18 @@ video {
     .modalHeader {
         padding: 16px;
         box-sizing: border-box;
-        height: auto;
-        padding-bottom: 50px;
-    }
+        height: 200px;
 
+    }
+    .modalHeaderContent2 {
+        align-items: flex-start;
+    }
+    .modalHeaderContent2 h2 {
+        width: 65%;
+    }
+    .modalMainLeft2 {
+        margin-top: 0;
+    }
     .modalHeader button {
         top: 16px;
         right: 16px;
@@ -3859,8 +3975,7 @@ video {
     .aboutUsPosition {
         width: 649px;
         height: 650px;
-        left: calc(50% - 649px/2 - 387.5px);
-        top: calc(50% - 650px/2 - 200px);
+        left: -315px;
         opacity: 0.5;
         top: -80px;
         z-index: 0;
@@ -4185,6 +4300,9 @@ video {
     }
     .maps {
         height: 350px;
+    }
+    .howWorkSlider .slick-slide {
+        opacity: 1;
     }
 }
 
@@ -4767,5 +4885,11 @@ video {
     }
     .headerReviewSentMainWrapper span {
         text-align: center;
+    }
+    .sun:after {
+        content: none;
+    }
+    .sun {
+        left: 20%;
     }
 }

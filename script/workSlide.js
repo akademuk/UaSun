@@ -58,8 +58,11 @@ $(document).ready(function () {
     }
 
     slider.on('afterChange', function (event, slick, currentSlide) {
-        playCenterVideo();
+        setTimeout(function() {
+            playCenterVideo();
+        }, 100);
     });
+    
 
     // Запуск видео при загрузке страницы и при изменении размера окна
     playCenterVideo();

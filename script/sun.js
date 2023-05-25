@@ -40,4 +40,4 @@ function toggleClass() {
   }
 }
 
-setInterval(toggleClass, 1500);
+setInterval(toggleClass, 2500);
