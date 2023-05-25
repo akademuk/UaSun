@@ -52,9 +52,9 @@ $(document).ready(function () {
         });
 
         // Воспроизведение видео в центральном слайде
-        if (centerVideo.length > 0) {
-            centerVideo.get(0).play();
-        }
+        // if (centerVideo.length > 0) {
+        //     centerVideo.get(0).play();
+        // }
     }
 
     slider.on('afterChange', function (event, slick, currentSlide) {
