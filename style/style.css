@@ -982,12 +982,14 @@ header ul li:nth-of-type(1) {
     position: relative;
     z-index: 3;
     margin-top: -2px;
+    overflow: hidden;
 }
 .needed .wrapper {
     max-width: 1116px;
     margin: 0 auto;
     position: relative;
     padding: 128px 0 175px 0;
+    z-index: 2;
 }
 
 .neededContainerPosition {
@@ -2703,52 +2705,20 @@ video {
     width: 100%;
     height: 100%;
     display: flex;
+    z-index: -1;
 }
 .gradientLeft {
     width: 50%;
+    position: relative;
+    left: -35%;
+    object-fit: cover;
 }
 .gradientRight {
     width: 50%;
     position: relative;
+    right: 19%;
 }
-.gradientRight1 {
-    position: absolute;
-    width: 410.43px;
-    height: 83.8px;
-    left: 0;
-    top: 50%;
-    background: rgba(255, 22, 134, 0.4);
-    filter: blur(87.5429px);
-    transform: rotate(86.56deg);
-}
-.gradientRight2 {
-    position: absolute;
-    width: 875.65px;
-    height: 744.58px;
-    left: calc(50% - 875.65px/2 + 171.76px);
-    top: calc(50% - 744.58px/2 + 914.73px);
-    background: rgba(17, 11, 14, 0.1);
-    filter: blur(50px);
-    backdrop-filter: blur(76.3195px);
-}
-.gradientRight3 {
-    position: absolute;
-    width: 581.29px;
-    height: 537.45px;
-    left: calc(50% - 581.29px/2 - 393.28px);
-    top: calc(50% - 537.45px/2 - 12.22px);
-    background: conic-gradient(from 82.49deg at 50% 50%, #F79D15 0deg, #524FA9 63.51deg, transparent 125.25deg, transparent 281.8deg, transparent 320.06deg, transparent 350.09deg, #F79D15 360deg);
-    transform: matrix(0.18, -0.98, -0.98, -0.18, 0, 0); 
-}
-.gradientRight4 {
-    position: absolute;
-    width: 442.95px;
-    height: 572.4px;
-    left: calc(50% - 442.95px/2 - 433.71px);
-    top: calc(50% - 572.4px/2 + 705.72px);
-    background: conic-gradient(from 68.51deg at 52.7% 68.54%, #F79D15 0deg, #524FA9 63.51deg, transparent 125.25deg, transparent 281.8deg, transparent 320.06deg, transparent 350.09deg, #F79D15 360deg);
-    transform: rotate(100.58deg);
-}
+
 .maps {
     height: 550px;
     width: 100%;
@@ -4401,6 +4371,38 @@ video {
     }
     .advantages {
         padding-bottom: 92px;
+    }
+    .gradient {
+        position: absolute;
+        top: -155px;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        z-index: -1;
+        transform: translateX(-50%);
+    }
+    .gradientLeft {
+        width: 500px;
+        position: relative;
+        left: 166px;
+        height: 690px;
+    }
+    .gradientRight {
+        width: 500px;
+        position: relative;
+        right: 0;
+        height: 690px;
+    }
+    .gradientLeft img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+    }
+    .gradientRight img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
     }
 }
 

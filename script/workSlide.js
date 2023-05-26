@@ -54,8 +54,12 @@ $(document).ready(function () {
         if (centerVideo.length > 0) {
             // Проверка типа устройства
             if (!isMobileDevice()) {
-                centerVideo.attr('playsinline', true);
-                centerVideo.get(0).play();
+                centerVideo[0].play();
+            } else {
+                centerVideo[0].play().catch(function(error) {
+                    // Обработка ошибки воспроизведения на мобильных устройствах
+                    console.error("Error playing video: ", error);
+                });
             }
         }
     }
@@ -78,10 +82,9 @@ $(document).ready(function () {
             playCenterVideo();
         } else {
             // При размере окна больше или равном 1200 пикселей останавливаем видео
-            slider.find("video").each(function () {
-                this.pause();
-                this.currentTime = 0;
-            });
+            setTimeout(function() {
+                playCenterVideo();
+            }, 100);
         }
     });
 
