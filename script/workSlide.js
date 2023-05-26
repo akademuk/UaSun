@@ -54,6 +54,7 @@ $(document).ready(function () {
         if (centerVideo.length > 0) {
             // Проверка типа устройства
             if (!isMobileDevice()) {
+                centerVideo.attr('playsinline', true);
                 centerVideo.get(0).play();
             }
         }
