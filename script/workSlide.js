@@ -43,24 +43,24 @@ $(document).ready(function () {
     function playCenterVideo() {
         var centerSlide = slider.find(".slick-current");
         var centerVideo = centerSlide.find("video");
-
+    
         // Остановка всех видео перед воспроизведением
         slider.find("video").each(function () {
             this.pause();
             this.currentTime = 0;
         });
-
-       // Воспроизведение видео в центральном слайде
+    
+        // Воспроизведение видео в центральном слайде
         if (centerVideo.length > 0) {
             // Проверка типа устройства
             if (!isMobileDevice()) {
                 centerVideo.attr('playsinline', true);
-                centerVideo.attr('autoplay', true);
                 centerVideo.get(0).play();
             }
         }
-
     }
+    
+    
 
     slider.on('afterChange', function (event, slick, currentSlide) {
         setTimeout(function() {
@@ -99,4 +99,5 @@ $(document).ready(function () {
     function isMobileDevice() {
         return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
     }
+    
 });
