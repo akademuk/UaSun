@@ -50,14 +50,16 @@ $(document).ready(function () {
             this.currentTime = 0;
         });
 
-        // Воспроизведение видео в центральном слайде
+       // Воспроизведение видео в центральном слайде
         if (centerVideo.length > 0) {
             // Проверка типа устройства
             if (!isMobileDevice()) {
                 centerVideo.attr('playsinline', true);
+                centerVideo.attr('autoplay', true);
                 centerVideo.get(0).play();
             }
         }
+
     }
 
     slider.on('afterChange', function (event, slick, currentSlide) {
