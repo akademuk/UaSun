@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
@@ -249,8 +248,8 @@
     </div>
 
 
-    <select id="city-select"></select>
-    <select id="region-select"></select>
+    <!-- <select id="city-select"></select>
+    <select id="region-select"></select> -->
 
 
 
@@ -343,9 +342,9 @@
             </div>
         </div>
         <div class="gradient">
-            <div class="gradientLeft">
+            <!-- <div class="gradientLeft">
                 <img src="img/GradientLeft.png" alt="">
-            </div>
+            </div> -->
             <!-- <div class="gradientRight">
                 <div class="gradientRight1"></div>
                 <div class="gradientRight2"></div>
@@ -1490,7 +1489,7 @@
                 placeholder: 'Выберите город',
                 // Загрузка данных о городах
                 ajax: {
-                    url: 'path/to/cities.json',
+                    url: 'CitiesAndVillagesMarch.json',
                     dataType: 'json',
                     processResults: function (data) {
                         return {
@@ -1505,7 +1504,7 @@
                 placeholder: 'Выберите регион',
                 // Загрузка данных о регионах
                 ajax: {
-                    url: 'path/to/regions.json',
+                    url: 'CitiesAndVillagesMarch.json',
                     dataType: 'json',
                     processResults: function (data) {
                         return {
