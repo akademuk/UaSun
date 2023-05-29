@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="style/slick.css">
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/fonts.css">
@@ -94,21 +97,23 @@
                 <div class="modalMainLeft modalMainLeft2">
                     <h3>Замовте консультацію нашого експерта зараз!</h3>
                     <div class="modalMainText">
-                        Ми будемо дуже вдячні, якщо <b>Ви залишите відгук</b> про нашу компанію прямо зараз на нашому сайті. Ваш відгук допоможе нам покращити якість наших послуг та забезпечити нашим клієнтам ще більш високий рівень сервісу.
+                        Ми будемо дуже вдячні, якщо <b>Ви залишите відгук</b> про нашу компанію прямо зараз на нашому
+                        сайті. Ваш відгук допоможе нам покращити якість наших послуг та забезпечити нашим клієнтам ще
+                        більш високий рівень сервісу.
                     </div>
                 </div>
                 <div class="modalMainRight">
                     <div id="note2"></div>
                     <form id="ajax-contact-form2" action="" data-form-validate="true" class="clientForm">
-                        <input type="text" name="name" value="" placeholder="Ім'я" required/>
+                        <input type="text" name="name" value="" placeholder="Ім'я" required />
                         <input type="tel" name="phone" value="" placeholder="Телефон" required />
                         <textarea name="message" rows="5" cols="25" placeholder="Текст відгуку" required></textarea>
-                        
+
                         <input name="url" type="hidden">
                         <!-- <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response"> -->
-        
+
                         <input class="submit" type="submit" name="submit" value="Надіслати" />
-        
+
                         <!-- <div class="text-danger" id="recaptchaError"></div> -->
                     </form>
                 </div>
@@ -175,7 +180,7 @@
             <div class="divFlex">
                 <ul>
                     <li>
-                        <a href="#">
+                        <a class="linkTransition" href="#">
                             <img width="18" height="18" src="img/home.svg" alt="home">
                         </a>
                     </li>
@@ -243,6 +248,13 @@
 
     </div>
 
+
+    <select id="city-select"></select>
+    <select id="region-select"></select>
+
+
+
+
     <section class="needed">
         <div class="wrapper">
             <h2>Ми корисні, <br> коли потрібно</h2>
@@ -296,7 +308,8 @@
                                     stroke-width="2" />
                             </svg>
                         </div>
-                        <h3 class="neededContainerRighth3">Прагнете долучити свій бізнес до <b>екологічного виробництва</b></h3>
+                        <h3 class="neededContainerRighth3">Прагнете долучити свій бізнес до <b>екологічного
+                                виробництва</b></h3>
                         <p>Сонячні електростанції є екологічно чистим джерелом енергії. Впроваджуючи такі системи у
                             роботу свого бізнесу, ви дбаєте про екологію, а також підвищуєте свою репутацію серед
                             конкурентів.</p>
@@ -319,11 +332,11 @@
                 </div>
             </div>
             <div class="neededContainerPosition">
-                <picture  class="CentralArtDes">
+                <picture class="CentralArtDes">
                     <source srcset="img/CentralArt.webp" type="image/webp">
                     <img width="588" height="800" src="img/CentralArt.png" alt="UASUN">
                 </picture>
-                <picture  class="CentralArtMobile">
+                <picture class="CentralArtMobile">
                     <source srcset="img/CentralArtMobile.webp" type="image/webp">
                     <img width="288" height="423" src="img/CentralArtMobile.png" alt="UASUN">
                 </picture>
@@ -331,7 +344,7 @@
         </div>
         <div class="gradient">
             <div class="gradientLeft">
-              <img src="img/GradientLeft.png" alt="">
+                <img src="img/GradientLeft.png" alt="">
             </div>
             <!-- <div class="gradientRight">
                 <div class="gradientRight1"></div>
@@ -420,7 +433,7 @@
                         <p>Наша компанія надає можливість доставки усього необхідного обладнання на об'єкт</p>
                     </div>
                     <div class="workSliderItemRight">
-                        <video autoplay playsinline  class="autoplay-video">
+                        <video autoplay playsinline class="autoplay-video">
                             <source src="img/5.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -509,7 +522,7 @@
                     <input type="text" name="region" value="" placeholder="Введіть місто/регіон " required />
                     <!-- <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response"> -->
                     <!-- <div class="text-danger" id="recaptchaError"></div> -->
-                     <input name="url" type="hidden">
+                    <input name="url" type="hidden">
                 </div>
                 <div class="orderCalculationBottom">
                     <p>оберіть Необхідну потужність</p>
@@ -518,7 +531,8 @@
                         порожніми</span>
                 </div>
                 <div class="orderCalculationBtn">
-                    <input class="btn submit orderCalculationBtnSub" type="submit" name="submit" value="РОЗРАХУВАТИ ВАРТІСТЬ" />
+                    <input class="btn submit orderCalculationBtnSub" type="submit" name="submit"
+                        value="РОЗРАХУВАТИ ВАРТІСТЬ" />
                 </div>
             </form>
         </div>
@@ -988,7 +1002,8 @@
                 <div class="sertificationImg">
                     <picture>
                         <source srcset="img/sertificat.webp" type="image/webp">
-                        <img width="261" height="302" src="img/sertificat.png" alt="Сертифікат відповідності “Промстандарт”">
+                        <img width="261" height="302" src="img/sertificat.png"
+                            alt="Сертифікат відповідності “Промстандарт”">
                     </picture>
                 </div>
                 <p>Сертифікат відповідності “Промстандарт”</p>
@@ -1301,10 +1316,10 @@
         <div class="wrapper">
             <div class="footerLeft">
                 <div class="footerLogo">
-                        <a href="#">
-                            <img width="128" height="40" src="img/logo.svg" alt="UASUN">
-                            <span>Ваш провідник на шляху до енергетичної автономії</span>
-                        </a>
+                    <a href="#">
+                        <img width="128" height="40" src="img/logo.svg" alt="UASUN">
+                        <span>Ваш провідник на шляху до енергетичної автономії</span>
+                    </a>
                 </div>
                 <div class="footerContact">
                     <div class="footerContactLink">
@@ -1373,6 +1388,9 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
     <script src="script/slick.js"></script>
     <script src="script/sun.js"></script>
     <script src="script/consultationOrder.js"></script>
@@ -1396,7 +1414,7 @@
                 type: "single", // Одиночный ползунок
                 grid: true, // Отображение шкалы
                 from: 0, // Значение по умолчанию
-                values: ["5kW", "10kW","15kW","20kW","25W","30W","35W","40W","45W","50W","55W","60W","65W","70W","75W","80W","85W","90W","95W","100W","105W","110W","115W","120W","125W","130W","135W","140W","145W", "150W", "155W", "160W", "165W", "170W", "175W", "180W", "185W", "190W", "195W", "200W"], // Доступные значения
+                values: ["5kW", "10kW", "15kW", "20kW", "25kW", "30kW", "35kW", "40kW", "45kW", "50kW", "55kW", "60kW", "65kW", "70kW", "75kW", "80kW", "85kW", "90kW", "95kW", "100kW", "105kW", "110kW", "115kW", "120kW", "125kW", "130kW", "135kW", "140kW", "145kW", "150kW", "155kW", "160kW", "165kW", "170kW", "175kW", "180kW", "185kW", "190kW", "195kW", "200kW"], // Доступные значения
                 step: 5, // Шаг значений
                 prettify: function (value) {
                     return value + "%"; // Функция для форматирования значения
@@ -1421,33 +1439,33 @@
 
     <script>
 
-      // Функция для добавления/удаления класса "active"
-      function toggleClass(elements, className) {
-      for (var i = 0; i < elements.length; i++) {
-        elements[i].classList.toggle(className);
-      }
-    }
+        // Функция для добавления/удаления класса "active"
+        function toggleClass(elements, className) {
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].classList.toggle(className);
+            }
+        }
 
-    // Функция для установки интервала появления/исчезновения
-    function startAnimation() {
-      var bannerImgs = document.getElementsByClassName('bannerImg');
-      var suns = document.getElementsByClassName('sun');
+        // Функция для установки интервала появления/исчезновения
+        function startAnimation() {
+            var bannerImgs = document.getElementsByClassName('bannerImg');
+            var suns = document.getElementsByClassName('sun');
 
-      setInterval(function() {
-        toggleClass(bannerImgs, 'active');
-        toggleClass(suns, 'active');
-      }, 4500);
-    }
+            setInterval(function () {
+                toggleClass(bannerImgs, 'active');
+                toggleClass(suns, 'active');
+            }, 4500);
+        }
 
-    // Запуск анимации после задержки
-    setTimeout(startAnimation, 1000);
+        // Запуск анимации после задержки
+        setTimeout(startAnimation, 1000);
 
     </script>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             // При клике на ссылку с якорем
-            $('a[href^="#"]').on('click', function(event) {
+            $('a[href^="#"]').on('click', function (event) {
                 // Отменяем стандартное поведение ссылки
                 event.preventDefault();
 
@@ -1456,16 +1474,57 @@
 
                 // Проверяем, что целевой якорь существует на странице
                 if (target.length) {
-                // Анимированная прокрутка до целевого якоря
-                $('html, body').animate({
-                    scrollTop: target.offset().top
-                }, 800); // Здесь можно настроить скорость анимации
+                    // Анимированная прокрутка до целевого якоря
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 800); // Здесь можно настроить скорость анимации
                 }
             });
-            });
+        });
 
     </script>
+    <script>
+              $(document).ready(function () {
+            // Инициализация Select2 для выбора города
+            $('#city-select').select2({
+                placeholder: 'Выберите город',
+                // Загрузка данных о городах
+                ajax: {
+                    url: 'path/to/cities.json',
+                    dataType: 'json',
+                    processResults: function (data) {
+                        return {
+                            results: data
+                        };
+                    }
+                }
+            });
 
+            // Инициализация Select2 для выбора региона
+            $('#region-select').select2({
+                placeholder: 'Выберите регион',
+                // Загрузка данных о регионах
+                ajax: {
+                    url: 'path/to/regions.json',
+                    dataType: 'json',
+                    processResults: function (data) {
+                        return {
+                            results: data
+                        };
+                    }
+                }
+            });
+
+            // Обработчик выбора города
+            $('#city-select').on('change', function () {
+                var selectedCity = $(this).val();
+                // Загрузка данных о соответствующем регионе и обновление списка регионов
+                $.getJSON('path/to/region-by-city.json', { city: selectedCity }, function (data) {
+                    $('#region-select').val(data.regionId).trigger('change');
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
