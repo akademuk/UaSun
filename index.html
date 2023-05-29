@@ -247,8 +247,8 @@
     </div>
 
 
-    <!-- <select id="city-select"></select>
-    <select id="region-select"></select> -->
+
+    <!-- <select id="region-select"></select> -->
 
 
 
@@ -517,7 +517,7 @@
                 <div class="orderCalculationFormTop">
                     <input type="text" name="name" value="" placeholder="Ваше ім'я" required />
                     <input type="tel" name="phone" value="" placeholder="Контактний Телефон " required />
-                    <input type="text" name="region" value="" placeholder="Введіть місто/регіон " required />
+                    <select type="text" name="region" value="" id="city-select"></select>
                     <!-- <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response"> -->
                     <!-- <div class="text-danger" id="recaptchaError"></div> -->
                     <input name="url" type="hidden">
@@ -1485,19 +1485,33 @@
 $(document).ready(function () {
   // Инициализация Select2 для выбора города
   $('#city-select').select2({
-    placeholder: 'Выберите город',
+    placeholder: 'Введіть місто/регіон',
+    minimumInputLength: 1, // Минимальная длина ввода: 2 символа
+    language: {
+      inputTooShort: function(args) {
+        var remainingChars = args.minimum - args.input.length;
+        return 'Будь ласка, введіть назву міста';
+      },
+      noResults: function() {
+        return 'Нічого не знайдено';
+      },
+      searching: function() {
+        return 'Пошук...';
+      }
+    },
     ajax: {
       url: 'CitiesAndVillagesMarch.json',
       dataType: 'json',
       delay: 250,
       processResults: function (data) {
+        var searchTerm = $('#city-select').data('select2').dropdown.$search.val().toLowerCase();
+
+        var filteredData = filterCitiesByLetter(data, searchTerm);
         return {
-          results: data.filter(function (item) {
-            return item.name.ru && item.name.ru.toLowerCase().includes($('#city-select').val().toLowerCase());
-          }).map(function (item) {
+          results: filteredData.map(function (item) {
             return {
               id: item.id,
-              text: item.name.ru
+              text: item.name.uk
             };
           })
         };
@@ -1506,35 +1520,31 @@ $(document).ready(function () {
     }
   });
 
-  // Инициализация Select2 для выбора региона
-  $('#region-select').select2({
-    placeholder: 'Выберите регион',
-    ajax: {
-      url: 'CitiesAndVillagesMarch.json',
-      dataType: 'json',
-      processResults: function (data) {
-        return {
-          results: data.map(function (item) {
-            return {
-              id: item.id,
-              text: item.region
-            };
-          })
-        };
-      }
+  // Функция для фильтрации городов по введенной букве
+  function filterCitiesByLetter(data, letter) {
+    if (letter === '') {
+      return data;
     }
-  });
+    return data.filter(function (item) {
+      return (
+        item.name &&
+        item.name.uk &&
+        item.name.uk.toLowerCase().startsWith(letter)
+      );
+    });
+  }
 
   // Обработчик выбора города
-  $('#city-select').on('change', function () {
-    var selectedCity = $(this).val();
-    $.getJSON('CitiesAndVillagesMarch.json', { object_name: selectedCity }, function (data) {
-      var regionId = data.region;
-      $('#region-select').val(regionId).trigger('change');
-    });
+  $('#city-select').on('change', function (e) {
+    if ($(this).val() !== '') {
+      var selectedCity = $(this).val();
+      $.getJSON('CitiesAndVillagesMarch.json', { object_name: selectedCity }, function (data) {
+        var regionId = data.region;
+        $('#region-select').val(regionId).trigger('change.select2');
+      });
+    }
   });
 });
-
 
 
     </script>
