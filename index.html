@@ -94,7 +94,6 @@
             </div>
             <div class="modalMain">
                 <div class="modalMainLeft modalMainLeft2">
-                    <h3>Замовте консультацію нашого експерта зараз!</h3>
                     <div class="modalMainText">
                         Ми будемо дуже вдячні, якщо <b>Ви залишите відгук</b> про нашу компанію прямо зараз на нашому
                         сайті. Ваш відгук допоможе нам покращити якість наших послуг та забезпечити нашим клієнтам ще
@@ -111,7 +110,7 @@
                         <input name="url" type="hidden">
                         <!-- <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response"> -->
 
-                        <input class="submit" type="submit" name="submit" value="Надіслати" />
+                        <input class="submit buttonlinkTransitionInput2" type="submit" name="submit" value="Надіслати" />
 
                         <!-- <div class="text-danger" id="recaptchaError"></div> -->
                     </form>
@@ -161,7 +160,7 @@
 
                         <input name="url" type="hidden">
                         <!-- <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response"> -->
-                        <input class="btn submit" type="submit" name="submit" value="Надіслати" />
+                        <input class="btn submit buttonlinkTransitionInput2" type="submit" name="submit" value="Надіслати" />
                         <!-- <div class="text-danger" id="recaptchaError"></div> -->
                     </form>
                 </div>
@@ -184,17 +183,17 @@
                         </a>
                     </li>
                     <li>
-                        <a class="burgerClose" href="#AboutUs" class="linkTransition">
+                        <a class="burgerClose linkTransition" href="#AboutUs" class="linkTransition">
                             ПРО НАС
                         </a>
                     </li>
                     <li>
-                        <a class="burgerClose" href="#Buy" class="linkTransition">
+                        <a class="burgerClose linkTransition" href="#Buy" class="linkTransition">
                             ПРИДБАТИ
                         </a>
                     </li>
                     <li>
-                        <a class="burgerClose" href="#Contact" class="linkTransition">
+                        <a class="burgerClose linkTransition" href="#Contact" class="linkTransition">
                             КОНТАКТИ
                         </a>
                     </li>
@@ -530,7 +529,7 @@
                         порожніми</span>
                 </div>
                 <div class="orderCalculationBtn">
-                    <input class="btn submit orderCalculationBtnSub" type="submit" name="submit"
+                    <input class="btn submit orderCalculationBtnSub buttonlinkTransitionInput" type="submit" name="submit"
                         value="РОЗРАХУВАТИ ВАРТІСТЬ" />
                 </div>
             </form>
@@ -1348,17 +1347,17 @@
                         </a>
                     </li>
                     <li>
-                        <a class="burgerClose" href="#AboutUs" class="linkTransition">
+                        <a class="burgerClose linkTransition" href="#AboutUs" class="linkTransition">
                             ПРО НАС
                         </a>
                     </li>
                     <li>
-                        <a class="burgerClose" href="#Buy" class="linkTransition">
+                        <a class="burgerClose linkTransition" href="#Buy" class="linkTransition">
                             ПРИДБАТИ
                         </a>
                     </li>
                     <li>
-                        <a class="burgerClose" href="#Contact" class="linkTransition">
+                        <a class="burgerClose linkTransition" href="#Contact" class="linkTransition">
                             КОНТАКТИ
                         </a>
                     </li>
@@ -1483,46 +1482,61 @@
 
     </script>
     <script>
-              $(document).ready(function () {
-            // Инициализация Select2 для выбора города
-            $('#city-select').select2({
-                placeholder: 'Выберите город',
-                // Загрузка данных о городах
-                ajax: {
-                    url: 'CitiesAndVillagesMarch.json',
-                    dataType: 'json',
-                    processResults: function (data) {
-                        return {
-                            results: data
-                        };
-                    }
-                }
-            });
+$(document).ready(function () {
+  // Инициализация Select2 для выбора города
+  $('#city-select').select2({
+    placeholder: 'Выберите город',
+    ajax: {
+      url: 'CitiesAndVillagesMarch.json',
+      dataType: 'json',
+      delay: 250,
+      processResults: function (data) {
+        return {
+          results: data.filter(function (item) {
+            return item.name.ru && item.name.ru.toLowerCase().includes($('#city-select').val().toLowerCase());
+          }).map(function (item) {
+            return {
+              id: item.id,
+              text: item.name.ru
+            };
+          })
+        };
+      },
+      cache: true
+    }
+  });
 
-            // Инициализация Select2 для выбора региона
-            $('#region-select').select2({
-                placeholder: 'Выберите регион',
-                // Загрузка данных о регионах
-                ajax: {
-                    url: 'CitiesAndVillagesMarch.json',
-                    dataType: 'json',
-                    processResults: function (data) {
-                        return {
-                            results: data
-                        };
-                    }
-                }
-            });
+  // Инициализация Select2 для выбора региона
+  $('#region-select').select2({
+    placeholder: 'Выберите регион',
+    ajax: {
+      url: 'CitiesAndVillagesMarch.json',
+      dataType: 'json',
+      processResults: function (data) {
+        return {
+          results: data.map(function (item) {
+            return {
+              id: item.id,
+              text: item.region
+            };
+          })
+        };
+      }
+    }
+  });
 
-            // Обработчик выбора города
-            $('#city-select').on('change', function () {
-                var selectedCity = $(this).val();
-                // Загрузка данных о соответствующем регионе и обновление списка регионов
-                $.getJSON('path/to/region-by-city.json', { city: selectedCity }, function (data) {
-                    $('#region-select').val(data.regionId).trigger('change');
-                });
-            });
-        });
+  // Обработчик выбора города
+  $('#city-select').on('change', function () {
+    var selectedCity = $(this).val();
+    $.getJSON('CitiesAndVillagesMarch.json', { object_name: selectedCity }, function (data) {
+      var regionId = data.region;
+      $('#region-select').val(regionId).trigger('change');
+    });
+  });
+});
+
+
+
     </script>
 </body>
 

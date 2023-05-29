@@ -70,7 +70,15 @@ input {
 button {
     font-family: eUkraine;
 }
-
+#city-select {
+    width: 500px;
+}
+#region-select {
+    width: 500px;
+}
+.select2  {
+    width: 500px !important;
+}
 .linkTransition:hover {
     transition: all 0.3s;
     color: #DDA83F;
@@ -90,6 +98,23 @@ button {
 .buttonlinkTransition:active {
     transition: all 0.3s;
     background: #F79C14 !important;
+    cursor: pointer;
+}
+.buttonlinkTransitionInput:hover {
+    transition: all 0.3s;
+    background: url(../img/IconLibrary2.svg), #EDBF71;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 212px 24px;
+    cursor: pointer;
+}
+
+.buttonlinkTransitionInput:active {
+    transition: all 0.3s;
+    background: url(../img/IconLibrary2.svg), #F79C14;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 212px 24px;
     cursor: pointer;
 }
 
@@ -1837,6 +1862,7 @@ header ul li:nth-of-type(1) {
     line-height: 140%;
     display: flex;
     align-items: center;
+    text-transform: none;
     color: #FFFFFF;
     margin-left: 8px;
 }
@@ -1873,6 +1899,7 @@ header ul li:nth-of-type(1) {
     font-size: 16px;
     line-height: 140%;
     color: #F79C14;
+    margin-left: 0 !important;
 }
 
 
@@ -2162,8 +2189,8 @@ header ul li:nth-of-type(1) {
 
 .sertificationText {
     font-weight: 200;
-    font-size: 12px;
-    line-height: 150%;
+    font-size: 16px;
+    line-height: 140%;
     color: #FFF2E1;
 }
 
@@ -2282,14 +2309,16 @@ header ul li:nth-of-type(1) {
     width: calc(50% - 12px);
     height: 83.5px;
     margin-bottom: 24px;
-    padding-top: 17px;
     position: relative;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 .warrantyContainerImg img {
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .warrantyRight h2 {
@@ -2909,7 +2938,23 @@ video {
     text-transform: uppercase;
     color: #2A2F35;
 }
+#ajax-contact-form .submit.buttonlinkTransitionInput2:hover {
+    transition: all 0.3s;
+    background: url(../img/message2.svg), #EDBF71 !important;
+    background-repeat: no-repeat !important;
+    background-size: auto !important;
+    background-position: 108px 16px !important;
+    cursor: pointer;
+}
 
+#ajax-contact-form .submit.buttonlinkTransitionInput2:active {
+    transition: all 0.3s;
+    background: url(../img/message2.svg), #F79C14 !important;
+    background-repeat: no-repeat !important;
+    background-size: auto !important;
+    background-position: 108px 16px !important;
+    cursor: pointer;
+}
 
 
 
