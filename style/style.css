@@ -79,6 +79,15 @@ button {
     transition: all 0.3s;
     color: #F79C14;
 }
+.linkTransition2:hover {
+    transition: all 0.3s;
+    color: #A7CAFF !important;
+}
+
+.linkTransition2:active {
+    transition: all 0.3s;
+    color: #0C33FF !important;
+}
 
 .buttonlinkTransition:hover {
     transition: all 0.3s;
@@ -3070,9 +3079,28 @@ video {
 #ajax-contact-form .select2.select2-container--open {
     border-radius: 4px 4px 0 0!important;
 }
-
-
-
+.maps iframe {
+    width: 100%;
+    height: 100%;
+}
+.footerContactLinkMaps {
+    margin-bottom: 8.5px;
+}
+.footerContactLinkMaps p {
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+}
+.footerContactLinkMaps > a {
+    font-weight: 400 !important;
+    font-size: 13px !important;
+    line-height: 17px !important;
+    text-transform: uppercase !important;
+    color: #5D9EFF !important;
+}
 
 
 
@@ -4723,7 +4751,12 @@ video {
     .bannerContentTittle {
         margin-bottom: 84px;
     }
-
+    .footerContactLinkMaps {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4px;
+    }
     .bannerImg {
         left: -34px;
     }
@@ -5291,7 +5324,7 @@ video {
     }
 
     footer {
-        height: 791px;
+        height: 831px;
         padding: 64px 16px;
     }
 
@@ -5359,7 +5392,7 @@ video {
     }
 
     footer {
-        height: 775px;
+        height: 831px;
     }
 
     .footeRight ul {
