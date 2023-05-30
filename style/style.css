@@ -3006,6 +3006,9 @@ video {
 }
 .select2-container--open .select2-dropdown--below {
     border: none !important;
+    top: -73px;
+    border-radius:50px !important;
+    height: 72px;
 }
 .select2-container .select2-selection--single {
     border: none !important;
@@ -3017,8 +3020,14 @@ video {
     padding-bottom: 20px;
 }
 .select2-container--open {
-    border-radius: 50px 50px 0 0 !important;
+    border-radius: 50px !important;
     z-index: 22222;
+}
+.select2-results__options {
+    position: absolute;
+    top: -30px !important;
+    width: 356px;
+    background: #fff;
 }
 .select2-search__field {
     height: 30px !important;
@@ -3029,7 +3038,10 @@ video {
     line-height: 17px !important;
     color: #81878E !important;
 }
-.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable Х
+.select2-results {
+    position: absolute;
+    bottom: -30px;
+}
 
 .select2-selection__rendered {
     font-family: eUkraine !important;
@@ -3045,6 +3057,9 @@ video {
     line-height: 17px !important;
     color: #81878E !important;
 }
+.select2-container--default .select2-results>.select2-results__options {
+    background: transparent;
+}
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
     background-color: #F79C14 !important;
     color: rgb(30, 33, 38) !important;
@@ -3053,7 +3068,28 @@ video {
     line-height: 17px !important;
     color: #81878E !important;
 }
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    border: none;
+    width: 255px;
+    margin: 0 auto;
+}
 
+.select2-results__option.select2-results__message {
+    background: transparent !important;
+}
+.select2-results__option--selectable {
+    background:#FFFFFF !important;
+}
+.select2-search--dropdown {
+    display: flex;
+    justify-content: center;
+    background: url(../img/homeInput.svg), #FFFFFF;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 32px 8px;
+    border-radius: 50px;
+    margin-top: 15px;
+}
 #ajax-contact-form .select2 {
         display: flex;
         flex-direction: row;
