@@ -4866,6 +4866,35 @@ video {
         margin-top: -4px;
         padding: 0 !important;
     }
+    .body.active .select2-results__options {
+        width: 256px !important;
+    }
+    .body.active .select2-container--default .select2-results>.select2-results__options {
+        width: 256px !important;
+    }
+    .body.active {
+        position: relative;
+    }
+    .body.active .select2-container {
+        left: calc(100% - 272px) !important;
+      right:  0 !important;
+    }
+    .body.active .select2-container.select2-container--open .select2-dropdown--below {
+        left: calc(100% - 272px) !important;
+    }
+    #ajax-contact-form {
+        align-items: center;
+    }
+    #ajax-contact-form .select2 {
+        width: 256px !important;
+        margin-left: 32px;
+    }
+    .body.active .select2-container .select2-dropdown {
+        top: -49px !important;
+    }
+    .body.active .select2-container.select2-container--open .select2-dropdown--below .select2-search input {
+        margin-left: 5px !important;
+    }
 }
 
 @media(max-width: 767px) {
