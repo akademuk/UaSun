@@ -4853,12 +4853,12 @@ video {
     }
     .select2-container--default .select2-search--dropdown .select2-search__field {
         border: none;
-    width: 100%;
-    margin: 0 auto;
-    margin-left: 35px !important;
-    box-sizing: border-box;
-    margin-top: -4px;
-    padding: 0 !important;
+        width: 100%;
+        margin: 0 auto;
+        margin-left: 35px !important;
+        box-sizing: border-box;
+        margin-top: -4px;
+        padding: 0 !important;
     }
 }
 
@@ -5182,6 +5182,20 @@ video {
     .moon {
         right: -299px;
         top: 260px;
+    }
+    .select2-results__options {
+        width: calc((33.33 / 100) * (100vw - 77px)) !important;
+    }
+    .select2-selection__rendered {
+        font-size: 10px;
+    }
+    .orderCalculationFormTop input {
+        font-size: 10px;
+        padding-top: 17px !important;
+        box-sizing: border-box;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__placeholder {
+        white-space: initial;
     }
 }
 
@@ -5570,5 +5584,20 @@ video {
     .orderCalculation {
         padding-bottom: 94px;
     }
-
+    .select2-container--open .select2-dropdown--below {
+        height: 49px !important;
+        top: -49px !important;
+    }
+    .select2-search--dropdown {
+        margin-top: 7px;
+    }
+    .select2-results__options {
+        width: calc(100vw - 32px) !important;
+    }
+    .select2-selection__rendered {
+        font-size: 12px;
+    }
+    .orderCalculationFormTop input {
+        font-size: 12px;
+    }
 }
