@@ -3206,8 +3206,14 @@ video {
     max-height: 120px !important;
     width: 450px !important;
 }
-
-
+.divFlexTrans:hover svg path{
+    fill: #DDA83F;
+    transition: all 0.3s;
+}
+.divFlexTrans:active svg path{
+    fill: #F79C14;
+    transition: all 0.3s;
+}
 
 
 
