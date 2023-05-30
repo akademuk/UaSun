@@ -2447,7 +2447,7 @@ header ul li:nth-of-type(1) {
     margin-top: 70px;
 }
 
-.reviewsTop button img {
+.reviewsTop button svg {
     margin-left: 9px;
 }
 
@@ -3084,7 +3084,7 @@ video {
     height: 100%;
 }
 .footerContactLinkMaps {
-    margin-bottom: 8.5px;
+    margin-bottom: 8px;
 }
 .footerContactLinkMaps p {
     font-weight: 200;
@@ -3100,9 +3100,28 @@ video {
     line-height: 17px !important;
     text-transform: uppercase !important;
     color: #5D9EFF !important;
+    display: flex;
+    align-items: center;
 }
-
-
+.footerContactLinkMaps > a svg {
+    margin-left: 8px;
+}
+.footerContactLinkMaps > a:hover svg path {
+    fill: #A7CAFF;
+    transition: all 0.3s;
+}
+.footerContactLinkMaps > a:active svg path {
+    fill: #0C33FF;
+    transition: all 0.3s;
+}
+.reviewsTop > button:hover svg path {
+    fill: #A7CAFF;
+    transition: all 0.3s;
+}
+.reviewsTop > button:active svg path {
+    fill: #0C33FF;
+    transition: all 0.3s;
+}
 
 
 
