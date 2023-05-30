@@ -2964,6 +2964,23 @@ video {
     background-position: 108px 16px !important;
     cursor: pointer;
 }
+#ajax-contact-form2 .submit.buttonlinkTransitionInput2:hover {
+    transition: all 0.3s;
+    background: url(../img/message2.svg), #EDBF71 !important;
+    background-repeat: no-repeat !important;
+    background-size: auto !important;
+    background-position: 108px 16px !important;
+    cursor: pointer;
+}
+
+#ajax-contact-form2 .submit.buttonlinkTransitionInput2:active {
+    transition: all 0.3s;
+    background: url(../img/message2.svg), #F79C14 !important;
+    background-repeat: no-repeat !important;
+    background-size: auto !important;
+    background-position: 108px 16px !important;
+    cursor: pointer;
+}
 .orderCalculationFormTop .select2  {
     display: flex;
     flex-direction: row;
@@ -3158,13 +3175,37 @@ video {
     fill: #0C33FF;
     transition: all 0.3s;
 }
-
-
-
-
-
-
-
+.body.active .select2-container .select2-dropdown {
+    height: 49px !important;
+    top: -49px;
+}
+.body.active .select2-container .select2-dropdown .select2-search--dropdown {
+    margin-top: 0;
+}
+#ajax-contact-form .select2.select2-container--open {
+    padding: 4px !important;
+    border-radius: 4px 4px 0 0!important;
+}
+.body.active .select2-container.select2-container--open .select2-dropdown--below {
+    border-radius: 4px !important;
+}
+.body.active .select2-container.select2-container--open .select2-dropdown--below .select2-search {
+    background: url(../img/homeInput.svg), #FFFFFF !important;
+    background-repeat: no-repeat !important;
+    background-size: auto !important;
+    background-position: 16px 16px !important;
+    padding: 16px 16px 16px 32px!important;
+    box-sizing: border-box;
+    height: 100% !important;
+    align-items: center;
+}
+.body.active .select2-container.select2-container--open .select2-dropdown--below .select2-search input {
+    width: 100% !important;
+}
+.body.active .select2-container--default .select2-results>.select2-results__options {
+    max-height: 120px !important;
+    width: 450px !important;
+}
 
 
 
@@ -4791,6 +4832,12 @@ video {
     }
     .neededWrapper {
         background: transparent;
+    }
+    .select2-results__options {
+        width: calc(33.33% - 4px) !important;
+    }
+    .howWorkSliderItemFlex .howWorkSliderItemFlexSection:nth-last-of-type(1) span b {
+        margin-left: 5px !important;
     }
 }
 

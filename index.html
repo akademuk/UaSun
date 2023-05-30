@@ -1493,7 +1493,7 @@
                 ajax: {
                     url: 'CitiesAndVillagesMarch.json',
                     dataType: 'json',
-                    delay: 250,
+                    delay: 0,
                     processResults: function (data) {
                         var searchTerm = $('#city-select').data('select2').dropdown.$search.val().toLowerCase();
 
@@ -1535,6 +1535,10 @@
                     });
                 }
             });
+            $('#city-select').addEventListener('click', function() {
+                ('.select2-search__field').focus();
+            });
+
         });
 
 
@@ -1546,6 +1550,7 @@
         $('#city-select2').select2({
             placeholder: 'Введіть місто/регіон',
             minimumInputLength: 1, // Минимальная длина ввода: 2 символа
+            containerCssClass: 'select2-container select2-container--default select2-container--open form2-select2-container',
             language: {
                 inputTooShort: function (args) {
                     var remainingChars = args.minimum - args.input.length;
@@ -1561,7 +1566,7 @@
             ajax: {
                 url: 'CitiesAndVillagesMarch.json',
                 dataType: 'json',
-                delay: 250,
+                delay: 0,
                 processResults: function (data) {
                     var searchTerm = $('#city-select2').data('select2').dropdown.$search.val().toLowerCase();
 
@@ -1603,10 +1608,27 @@
                 });
             }
         });
+        $('#city-select2').on('select2:open', function () {
+        setTimeout(function () {
+            $('.select2-search__field').focus();
+        }, 0);
+    });
     });
 
 
 </script>
+
+<script>
+$('#city-select').on('select2:open', function() {
+    var $select2Container = $(this).data('select2').$container;
+    var $searchField = $select2Container.find('.select2-search__field');
+    setTimeout(function() {
+      $searchField.focus();
+    }, 0);
+  });
+</script>
+
+
 </body>
 
 </html>
