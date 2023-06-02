@@ -1022,23 +1022,44 @@ header ul li:nth-of-type(1) {
 }
 
 .needed {
-    background: url(../img/whiteTexture.png), #1E2126;
+    background:#1E2126;
     background-repeat: repeat;
     background-size: auto;
     position: relative;
     z-index: 3;
     margin-top: -2px;
+    overflow: hidden;
 }
-/* .neededWrapper {
-    background: url(../img/gradient.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    z-index: 4;
-    max-width: 1920px;
-    margin: 0 auto;
-} */
+.needed::after {
+    content: "";
+    background: url(../img/whiteTexture.png);
+    background-repeat: repeat;
+    background-size: auto;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.gradient {
+    position: absolute;
+    z-index: 0;
+    width: 1920px;
+    height: 1304px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.gradient img {
+    object-fit: contain;
+    width: 1395px;
+    height: 1300px;
+}
 .needed .wrapper {
     max-width: 1116px;
     margin: 0 auto;
@@ -2802,69 +2823,13 @@ video {
 .gradient {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
     width: 100%;
     height: 100%;
     display: flex;
     z-index: 1;
 }
 
-.gradientLeft {
-    width: 50%;
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    top: 0;
-}
-
-.gradientRight {
-    width: 50%;
-    position: relative;
-}
-
-.gradientRight1 {
-    position: absolute;
-    width: 410.43px;
-    height: 83.8px;
-    left: 0;
-    top: 50%;
-    background: rgba(255, 22, 134, 0.4);
-    filter: blur(87.5429px);
-    transform: rotate(86.56deg);
-}
-
-.gradientRight2 {
-    position: absolute;
-    width: 875.65px;
-    height: 744.58px;
-    left: calc(50% - 875.65px/2 + 171.76px);
-    top: calc(50% - 744.58px/2 + 914.73px);
-    background: rgba(17, 11, 14, 0.1);
-    filter: blur(50px);
-    backdrop-filter: blur(76.3195px);
-}
-
-.gradientRight3 {
-    position: absolute;
-    width: 581.29px;
-    height: 537.45px;
-    left: calc(50% - 581.29px/2 - 393.28px);
-    top: calc(50% - 537.45px/2 - 12.22px);
-
-    background: conic-gradient(from 82.49deg at 50% 50%, #F79D15 0deg, #524FA9 63.51deg, #1E2126 125.25deg, #1E2126 281.8deg, #1E2126 320.06deg, #1E2126 350.09deg, #F79D15 360deg);
-    transform: matrix(0.38, 0.92, 0.92, -0.38, 0, 0);
-}
-
-.gradientRight4 {
-    position: absolute;
-    width: 442.95px;
-    height: 572.4px;
-    left: calc(50% - 442.95px/2 - 433.71px);
-    top: calc(50% - 572.4px/2 + 705.72px);
-
-    background: conic-gradient(from 68.51deg at 52.7% 68.54%, #F79D15 0deg, #524FA9 63.51deg, #1E2126 125.25deg, #1E2126 281.8deg, #1E2126 320.06deg, #1E2126 350.09deg, #F79D15 360deg);
-    transform: rotate(-76.62deg);
-}
 
 .maps {
     height: 550px;
